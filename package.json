@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "wave",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -14,7 +14,7 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "wave"
   },
   "browserslist": [
     ">0.2%",
