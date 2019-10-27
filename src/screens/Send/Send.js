@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import DropzoneArea from "../Dropzone/Dropzone";
+import DropzoneArea from "../../components/Dropzone/Dropzone";
 import {StyledButton} from "./styles";
 import styles from './Send.module.css'
 

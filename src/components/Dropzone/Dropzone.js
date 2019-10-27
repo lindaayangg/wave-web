@@ -1,11 +1,8 @@
 import React from 'react';
 import Dropzone from 'react-dropzone';
 import PropTypes from 'prop-types';
-import {Grid, Typography, withStyles} from '@material-ui/core';
-import CloudUploadIcon from '@material-ui/icons/CloudUpload';
-import styles from './Dropzone.module.css'
 import PreviewList from "../PreviewList/PreviewList";
-import {withSnackbar} from 'notistack';
+import {StyledDropzoneDiv, StyledGridRow, StyledUploadIcon} from "./styles";
 
 class DropzoneArea extends React.Component {
   state = {
@@ -14,7 +11,7 @@ class DropzoneArea extends React.Component {
 
   onDrop = (files) => {
     if (this.state.fileObjects.length + files.length > this.props.filesLimit) {
-      this.props.enqueueSnackbar('Only one file can be uploaded.', {autoHideDuration: 2000});
+      //this.props.enqueueSnackbar('Only one file can be uploaded.', {autoHideDuration: 2000});
     } else {
       files.forEach((file) => {
         const reader = new FileReader();
@@ -28,7 +25,7 @@ class DropzoneArea extends React.Component {
             if (this.props.onChange) {
               this.props.onChange(this.state.fileObjects.map(fileObject => fileObject.file));
             }
-            this.props.enqueueSnackbar('File ' + file.name + ' uploaded.', {autoHideDuration: 2000});
+            //this.props.enqueueSnackbar('File ' + file.name + ' uploaded.', {autoHideDuration: 2000});
           });
         };
         reader.readAsDataURL(file);
@@ -47,7 +44,7 @@ class DropzoneArea extends React.Component {
       if (this.props.onChange) {
         this.props.onChange(this.state.fileObjects.map(fileObject => fileObject.file));
       }
-      this.props.enqueueSnackbar('File ' + file.name + ' removed.', {autoHideDuration: 2000});
+      //this.props.enqueueSnackbar('File ' + file.name + ' removed.', {autoHideDuration: 2000});
     });
   };
 
@@ -62,7 +59,7 @@ class DropzoneArea extends React.Component {
         message += 'File is too big. Size limit is ' + this.convertBytesToMbsOrKbs(this.props.maxFileSize) + '. ';
       }
     });
-    this.props.enqueueSnackbar(message, {autoHideDuration: 2000});
+    //this.props.enqueueSnackbar(message, {autoHideDuration: 2000});
   };
 
   convertBytesToMbsOrKbs = (filesize) => {
@@ -86,29 +83,25 @@ class DropzoneArea extends React.Component {
         maxSize={this.props.maxFileSize}>
         {({getRootProps, getInputProps}) => (
           <section>
-            <div
+            <StyledDropzoneDiv
               {...getRootProps()}
-              className={styles.dropzone}
             >
               <input {...getInputProps()} />
               {
                 this.state.fileObjects.length === 0 ?
-                  <Grid container className={styles.grid}>
-                    <Grid item xs={12}>
-                      <br/><br/><br/>
-                      <Typography variant="h5">
+                  <StyledGridRow>
+                      <div>
                         {this.props.message}
-                      </Typography>
-                      <CloudUploadIcon className={styles.uploadIconSize}/>
-                    </Grid>
-                  </Grid>
+                      </div>
+                      <StyledUploadIcon name="cloud upload" size="big"/>
+                  </StyledGridRow>
                   :
                   <PreviewList
                     fileObjects={this.state.fileObjects}
                     handleRemove={this.handleRemove.bind(this)}
                   />
               }
-            </div>
+            </StyledDropzoneDiv>
           </section>
         )}
       </Dropzone>
