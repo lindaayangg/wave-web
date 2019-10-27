@@ -38,9 +38,11 @@ class PreviewList extends React.Component {
                     {fileObject.file.name}
                   </div>
                   <StyledRemoveButton
+                    circular
+                    size='mini'
                     icon
                     onClick={handleRemove(i)}>
-                    <Icon name="remove"/>
+                    <Icon name="trash"/>
                   </StyledRemoveButton>
                 </StyledImageContainer>
               </StyledContainer>

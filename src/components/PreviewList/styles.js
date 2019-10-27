@@ -8,10 +8,8 @@ export const StyledRemoveButton = styled(Button)`
     transition: .5s ease;
     position: absolute;
     opacity: 0;
-    top: 0px;
-    right: 0px;
-    width: 38px;
-    height: 38px;
+    top: -5px;
+    right: -5px;
   }
 `;
 
