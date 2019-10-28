@@ -3,7 +3,6 @@ import {Button, TextArea} from "semantic-ui-react";
 
 export const StyledButton = styled(Button)`
   &&& {
-    margin: 10px;
     color: #ffffff;
     background-color: #FA7268;
     width: 100px
