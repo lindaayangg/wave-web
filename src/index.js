@@ -1,9 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import Home from './components/home/home';
-// import * as serviceWorker from './serviceWorker';
+import 'typeface-roboto';
+import Send from './screens/Send/Send';
+import Home from './screens/Home/Home';
+import Receive from "./screens/Receive/Receive";
+import Error from "./screens/Error/Error";
+import 'semantic-ui-css/semantic.min.css';
+import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 
-ReactDOM.render(<Home />, document.getElementById('root'));
+const routing = (
+  <Router>
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route exact path="/send" component={Send} />
+      <Route exact path="/receive" component={Receive} />
+      <Route component={Error} />
+    </Switch>
+  </Router>
+);
 
-// serviceWorker.unregister();
+ReactDOM.render(routing, document.getElementById('root'));
+
