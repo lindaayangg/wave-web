@@ -34,9 +34,9 @@ class PreviewList extends React.Component {
               <StyledContainer>
                 <StyledImageContainer>
                   {img}
-                  <div>
+                  <Fragment>
                     {fileObject.file.name}
-                  </div>
+                  </Fragment>
                   <StyledRemoveButton
                     circular
                     size='mini'

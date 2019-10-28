@@ -2,7 +2,8 @@ import React from 'react';
 import Dropzone from 'react-dropzone';
 import PropTypes from 'prop-types';
 import PreviewList from "../PreviewList/PreviewList";
-import {StyledDropzoneDiv, StyledGridRow, StyledUploadIcon} from "./styles";
+import {StyledDropzoneDiv, StyledGridRow, StyledMessage, StyledUploadIcon} from "./styles";
+import strings from "../../res/strings";
 
 class DropzoneArea extends React.Component {
   state = {
@@ -90,9 +91,9 @@ class DropzoneArea extends React.Component {
               {
                 this.state.fileObjects.length === 0 ?
                   <StyledGridRow>
-                      <div>
-                        {this.props.message}
-                      </div>
+                      <StyledMessage>
+                        {strings.dropzone.message}
+                      </StyledMessage>
                       <StyledUploadIcon name="cloud upload" size="big"/>
                   </StyledGridRow>
                   :
@@ -113,7 +114,6 @@ DropzoneArea.defaultProps = {
   acceptedFiles: ['image/*'],
   filesLimit: 1,
   maxFileSize: 5000000,
-  message: 'Drag and drop image or click here',
   onChange: () => {},
 };
 

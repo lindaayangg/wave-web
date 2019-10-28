@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import {Button, GridRow} from "semantic-ui-react";
 import {Icon} from "semantic-ui-react";
 
-
 export const StyledRemoveButton = styled(Button)`
   &&& {
     transition: .5s ease;
@@ -53,6 +52,8 @@ export const StyledImageContainer = styled(GridRow)`
     z-index: 10;
     text-align: center;
     width: fit-content;
+    display: flex;
+    flex-direction: column;
     &:hover ${StyledSmallPreviewImg} {
       opacity: 0.3;
     };
