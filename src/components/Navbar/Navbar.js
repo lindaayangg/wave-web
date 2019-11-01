@@ -1,7 +1,8 @@
 import React from 'react';
 import {Menu} from 'semantic-ui-react';
 import strings from "../../res/strings";
-import {StyledDiv} from "./styles";
+import {StyledDiv, StyledMenu, StyledMenuItem} from "./styles";
+import Icon from "semantic-ui-react/dist/commonjs/elements/Icon";
 
 class Navbar extends React.Component {
   state = {
@@ -18,34 +19,32 @@ class Navbar extends React.Component {
     const {activeItem} = this.state;
     return (
       <StyledDiv>
-        <Menu
-          fluid={false}
+        <StyledMenu
           text
-          inverted
           size={"huge"}
           attached={"top"}>
-          <Menu.Item
+          <StyledMenuItem
             href="/"
             active={activeItem === 'home'}
             onClick={this.handleItemClick}
-            position={"left"}>
-            {strings.navBar.home}
-          </Menu.Item>
-          <Menu.Item
+          >
+            <Icon name='heart' size={"large"}/>
+          </StyledMenuItem>
+          <StyledMenuItem
             href="/send"
             active={activeItem === 'send'}
             onClick={this.handleItemClick}
-            position={"left"}>
+            >
             {strings.navBar.send}
-          </Menu.Item>
-          <Menu.Item
+          </StyledMenuItem>
+          <StyledMenuItem
             href="/receive"
             active={activeItem === 'receive'}
             onClick={this.handleItemClick}
-            position={"left"}>
+            >
             {strings.navBar.receive}
-          </Menu.Item>
-        </Menu>
+          </StyledMenuItem>
+        </StyledMenu>
       </StyledDiv>
     )
   }

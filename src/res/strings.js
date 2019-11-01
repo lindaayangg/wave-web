@@ -6,7 +6,6 @@ const strings = {
     textBoxPlaceholder: "Write a message...",
   },
   navBar: {
-    home: "HOME",
     send: "SEND",
     receive: "RECEIVE",
   }
