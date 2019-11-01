@@ -2,6 +2,7 @@ import React from 'react';
 import {Menu} from 'semantic-ui-react';
 import strings from "../../res/strings";
 import {StyledDiv, StyledMenu, StyledMenuItem} from "./styles";
+import Icon from "semantic-ui-react/dist/commonjs/elements/Icon";
 
 class Navbar extends React.Component {
   state = {
@@ -26,8 +27,8 @@ class Navbar extends React.Component {
             href="/"
             active={activeItem === 'home'}
             onClick={this.handleItemClick}
-            >
-            {strings.navBar.home}
+          >
+            <Icon name='heart' size={"large"}/>
           </StyledMenuItem>
           <StyledMenuItem
             href="/send"
