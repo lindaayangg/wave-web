@@ -5,6 +5,11 @@ const strings = {
   sendScreen: {
     textBoxPlaceholder: "Write a message...",
   },
+  navBar: {
+    home: "HOME",
+    send: "SEND",
+    receive: "RECEIVE",
+  }
 };
 
 export default strings;

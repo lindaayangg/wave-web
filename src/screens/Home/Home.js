@@ -1,11 +1,15 @@
 import React, {Component} from "react";
+import Navbar from "../../components/Navbar/Navbar";
+import {StyledDiv} from "./styles";
 
 class Home extends Component {
   render() {
-    return(
-      <div>
-        Welcome to Wave~~~
-      </div>
+    return (
+      <>
+        <Navbar></Navbar>
+        <StyledDiv>
+        </StyledDiv>
+      </>
     )
   }
 }
