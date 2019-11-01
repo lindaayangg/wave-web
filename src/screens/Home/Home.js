@@ -6,7 +6,6 @@ class Home extends Component {
   render() {
     return (
       <>
-        <Navbar></Navbar>
         <StyledDiv>
         </StyledDiv>
       </>

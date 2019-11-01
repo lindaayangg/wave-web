@@ -7,9 +7,11 @@ import Receive from "./screens/Receive/Receive";
 import Error from "./screens/Error/Error";
 import 'semantic-ui-css/semantic.min.css';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
+import Navbar from "./components/Navbar/Navbar";
 
 const routing = (
   <Router>
+    <Navbar/>
     <Switch>
       <Route exact path="/" component={Home} />
       <Route exact path="/send" component={Send} />
