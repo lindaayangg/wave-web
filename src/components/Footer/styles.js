@@ -6,7 +6,7 @@ import Button from "semantic-ui-react/dist/commonjs/elements/Button";
 export const StyledDiv = styled.div`
   &&& {
     background-color: #141414;
-    height: 67vh;
+    height: 70vh;
     color: white;
     padding: 70px;
   }
@@ -63,6 +63,6 @@ export const StyledSocialMediaButton = styled(Button)`
 
 export const StyledCopyRight = styled.div`
   &&& {
-    margin-top: 10px;
+    margin-top: 15px;
   }
 `;
