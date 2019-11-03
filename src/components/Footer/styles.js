@@ -6,7 +6,7 @@ import Button from "semantic-ui-react/dist/commonjs/elements/Button";
 export const StyledDiv = styled.div`
   &&& {
     background-color: #141414;
-    height: 70vh;
+    height: 65vh;
     color: white;
     padding: 70px;
   }
@@ -21,7 +21,7 @@ export const StyledContainerGridColumn = styled(GridColumn)`
 export const StyledInfoGridRow = styled(GridColumn)`
   &&& {
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
   }
 `;
 
@@ -58,5 +58,11 @@ export const StyledSocialMediaButton = styled(Button)`
     margin: 10px;
     background-color: #FA7268;
     color: #fff;
+  }
+`;
+
+export const StyledCopyRight = styled.div`
+  &&& {
+    margin-top: 10px;
   }
 `;

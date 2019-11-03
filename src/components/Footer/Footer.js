@@ -1,14 +1,17 @@
 import React, {Component} from "react";
 import {
-  StyledContainerGridColumn,
-  StyledDiv,
-  StyledDivider,
-  StyledHeader,
-  StyledInfoGridRow,
-  StyledListItem, StyledSocialMedia, StyledSocialMediaButton, StyledSocialMediaContainer
+    StyledContainerGridColumn,
+    StyledCopyRight,
+    StyledDiv,
+    StyledDivider,
+    StyledHeader,
+    StyledInfoGridRow,
+    StyledListItem,
+    StyledSocialMediaButton,
+    StyledSocialMediaContainer
 } from "./styles";
 import Grid from "semantic-ui-react/dist/commonjs/collections/Grid";
-import {Button, Icon} from "semantic-ui-react";
+import {Icon} from "semantic-ui-react";
 import List from "semantic-ui-react/dist/commonjs/elements/List";
 
 class Footer extends Component {
@@ -62,6 +65,7 @@ class Footer extends Component {
           <StyledSocialMediaButton circular icon>
             <Icon name="github"/>
           </StyledSocialMediaButton>
+          <StyledCopyRight>2019 © Wave Inc. All Rights Reserved.</StyledCopyRight>
         </StyledSocialMediaContainer>
       </StyledDiv>
     )
