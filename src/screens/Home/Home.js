@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import {StyledDiv} from "./styles";
+import Footer from "../../components/Footer/Footer";
 
 class Home extends Component {
   render() {
@@ -7,6 +8,8 @@ class Home extends Component {
       <>
         <StyledDiv>
         </StyledDiv>
+        <Footer>
+        </Footer>
       </>
     )
   }
