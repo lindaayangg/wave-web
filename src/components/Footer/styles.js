@@ -6,7 +6,7 @@ import Button from "semantic-ui-react/dist/commonjs/elements/Button";
 export const StyledDiv = styled.div`
   &&& {
     background-color: #141414;
-    height: 65vh;
+    height: 67vh;
     color: white;
     padding: 70px;
   }

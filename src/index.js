@@ -9,6 +9,7 @@ import 'semantic-ui-css/semantic.min.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Navbar from "./components/Navbar/Navbar";
 import About from "./screens/About/About";
+import Footer from "./components/Footer/Footer";
 
 const routing = (
   <Router>
@@ -20,6 +21,7 @@ const routing = (
       <Route exact path="/about" component={About}/>
       <Route component={Error}/>
     </Switch>
+    <Footer/>
   </Router>
 );
 
