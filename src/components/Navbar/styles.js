@@ -10,9 +10,7 @@ export const StyledDiv = styled.div`
 export const StyledMenu = styled(Menu)`
   &&& {
     height: 72px;
-    border: none !important;
-    box-shadow: none;
-    border-radius: 0;
+    border-bottom: 1px solid rgba(34,36,38,.15) !important;
     padding-left: 25px !important;
     background-color: #fff !important;
   }

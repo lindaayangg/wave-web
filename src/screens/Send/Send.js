@@ -1,16 +1,29 @@
 import React, {Component} from 'react';
 import DropzoneArea from "../../components/Dropzone/Dropzone";
-import {StyledButton, StyledDiv, StyledTextArea} from "./styles";
-import {Form} from "semantic-ui-react";
+import {
+  StyledButton, StyledButtonsWrapper,
+  StyledLeftGrid,
+  StyledRightGrid,
+  StyledSendIcon, StyledTab, StyledTabPane,
+  StyledTextArea,
+  StyledTitleText,
+  StyledWrapper
+} from "./styles";
+import {Form, Tab} from "semantic-ui-react";
 import strings from "../../res/strings";
 
 class Send extends Component {
 
   renderButtons() {
     return (
-      <StyledButton>
-        Send
-      </StyledButton>
+      <StyledButtonsWrapper>
+        <StyledButton>
+          {strings.buttons.clear}
+        </StyledButton>
+        <StyledButton>
+          {strings.buttons.send}
+        </StyledButton>
+      </StyledButtonsWrapper>
     )
   }
 
@@ -18,7 +31,7 @@ class Send extends Component {
     return (
       <Form>
         <StyledTextArea
-          rows={6}
+          rows={10}
           placeholder={strings.sendScreen.textBoxPlaceholder}
         >
         </StyledTextArea>
@@ -26,15 +39,61 @@ class Send extends Component {
     )
   }
 
-  render() {
+  renderTab() {
+    const panes = [
+      {
+        menuItem: 'Text', render: () =>
+          <StyledTabPane>
+            {this.renderTextField()}
+            {this.renderButtons()}
+          </StyledTabPane>
+      },
+      {
+        menuItem: 'Images/Files', render: () =>
+          <StyledTabPane>
+            <DropzoneArea></DropzoneArea>
+            {this.renderButtons()}
+          </StyledTabPane>
+      },
+    ];
+    return (
+      <StyledTab
+        menu={{fluid: true, vertical: true}}
+        menuPosition='left'
+        panes={panes}
+      />
+    )
+  }
+
+  renderLeftGrid() {
     return (
       <>
-        <StyledDiv>
-          {this.renderTextField()}
-          <DropzoneArea></DropzoneArea>
-          {this.renderButtons()}
-        </StyledDiv>
+        {this.renderTab()}
       </>
+    )
+  }
+
+  renderRightGrid() {
+    return (
+      <>
+        <StyledSendIcon name="send" size="huge"/>
+        <StyledTitleText>
+          {strings.sendScreen.title}
+        </StyledTitleText>
+      </>
+    )
+  }
+
+  render() {
+    return (
+      <StyledWrapper columns={2} relaxed="very">
+        <StyledLeftGrid width={9} verticalAlign="middle">
+          {this.renderLeftGrid()}
+        </StyledLeftGrid>
+        <StyledRightGrid width={7} verticalAlign="middle">
+          {this.renderRightGrid()}
+        </StyledRightGrid>
+      </StyledWrapper>
     );
   }
 }
