@@ -8,6 +8,7 @@ const strings = {
   navBar: {
     send: "SEND",
     receive: "RECEIVE",
+    about: "ABOUT",
   }
 };
 

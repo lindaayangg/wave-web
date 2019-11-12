@@ -21,14 +21,14 @@ class Navbar extends React.Component {
       <StyledDiv>
         <StyledMenu
           text
-          size={"huge"}
-          attached={"top"}>
+          size="huge"
+          fixed="top">
           <StyledMenuItem
             href="/"
             active={activeItem === 'home'}
             onClick={this.handleItemClick}
           >
-            <Icon name='heart' size={"large"}/>
+            <Icon name='heart' size="large"/>
           </StyledMenuItem>
           <StyledMenuItem
             href="/send"
@@ -43,6 +43,13 @@ class Navbar extends React.Component {
             onClick={this.handleItemClick}
             >
             {strings.navBar.receive}
+          </StyledMenuItem>
+          <StyledMenuItem
+            href="/about"
+            active={activeItem === 'about'}
+            onClick={this.handleItemClick}
+          >
+            {strings.navBar.about}
           </StyledMenuItem>
         </StyledMenu>
       </StyledDiv>
