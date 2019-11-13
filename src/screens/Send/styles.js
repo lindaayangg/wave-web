@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {Button, Grid, GridColumn, Header, Icon, Tab, TextArea} from "semantic-ui-react";
+import {Button, Grid, GridColumn, Header, Icon, Image, Tab, TextArea} from "semantic-ui-react";
 
 export const StyledTextArea = styled(TextArea)`
   &&& {
@@ -61,7 +61,7 @@ export const StyledSendIcon = styled(Icon)`
 export const StyledTitleText = styled(Header)`
   &&& {
     font-size: 35px;
-    padding: 0 50px 50px 50px;
+    padding: 0 50px 0px 50px;
     text-align: center;
     color: #FA7268;
   }
@@ -78,6 +78,11 @@ export const StyledTabPane = styled(Tab.Pane)`
     height: 400px;
     padding: 20px;
     border-radius: 10px !important;
-    // border-color: #FA7268 !important; 
+  }
+`;
+
+export const StyledSendImage = styled(Image)`
+  &&& {
+    width: 100wh !important;
   }
 `;
