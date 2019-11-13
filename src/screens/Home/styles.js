@@ -11,7 +11,7 @@ export const StyledGridWrapper = styled(Grid)`
 
 export const StyledGridLeftColumn = styled(GridColumn)`
   &&& {
-    padding: 80px !important;
+    padding: 0px 80px 80px 80px !important;
   }
 `;
 
