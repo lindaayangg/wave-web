@@ -15,6 +15,7 @@ import {
 } from "./styles";
 import {Form} from "semantic-ui-react";
 import strings from "../../res/strings";
+import {SemanticToastContainer, toast} from 'react-semantic-toasts';
 
 class Send extends Component {
   state = {

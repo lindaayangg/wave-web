@@ -9,6 +9,7 @@ export const StyledRemoveButton = styled(Button)`
     opacity: 0;
     top: -5px;
     right: -5px;
+    z-index: 5;
   }
 `;
 

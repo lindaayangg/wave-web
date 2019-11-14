@@ -2,17 +2,33 @@ import React from 'react';
 import Dropzone from 'react-dropzone';
 import PropTypes from 'prop-types';
 import PreviewList from "../PreviewList/PreviewList";
-import {StyledDropzoneDiv, StyledGridRow, StyledMessage, StyledUploadIcon} from "./styles";
+import {
+  StyledDropzoneDiv,
+  StyledGridRow,
+  StyledMessage,
+  StyledSemanticToastContainer,
+  StyledUploadIcon
+} from "./styles";
 import strings from "../../res/strings";
+import {toast} from 'react-semantic-toasts';
 
 class DropzoneArea extends React.Component {
   state = {
     fileObjects: [],
   };
 
-  onDrop = (files) => {
+  handleOnDrop = (files) => {
     if (this.state.fileObjects.length + files.length > this.props.filesLimit) {
-      //this.props.enqueueSnackbar('Only one file can be uploaded.', {autoHideDuration: 2000});
+      setTimeout(() => {
+        toast({
+          type: 'error',
+          icon: 'exclamation circle',
+          title: 'Upload Error',
+          description: 'Only one file can be uploaded.',
+          animation: 'bounce',
+          time: 1500,
+        });
+      }, 300);
     } else {
       files.forEach((file) => {
         const reader = new FileReader();
@@ -26,7 +42,16 @@ class DropzoneArea extends React.Component {
             if (this.props.onChange) {
               this.props.onChange(this.state.fileObjects.map(fileObject => fileObject.file));
             }
-            //this.props.enqueueSnackbar('File ' + file.name + ' uploaded.', {autoHideDuration: 2000});
+            setTimeout(() => {
+              toast({
+                type: 'success',
+                icon: 'check circle',
+                title: 'Upload Success',
+                description: 'File ' + file.name + ' uploaded successfully.',
+                animation: 'fade',
+                time: 1500,
+              });
+            }, 200);
           });
         };
         reader.readAsDataURL(file);
@@ -45,7 +70,16 @@ class DropzoneArea extends React.Component {
       if (this.props.onChange) {
         this.props.onChange(this.state.fileObjects.map(fileObject => fileObject.file));
       }
-      //this.props.enqueueSnackbar('File ' + file.name + ' removed.', {autoHideDuration: 2000});
+      setTimeout(() => {
+        toast({
+          type: 'success',
+          icon: 'check circle',
+          title: 'Remove Success',
+          description: 'File ' + file.name + ' removed successfully.',
+          animation: 'fade',
+          time: 1000,
+        });
+      }, 200);
     });
   };
 
@@ -60,7 +94,16 @@ class DropzoneArea extends React.Component {
         message += 'File is too big. Size limit is ' + this.convertBytesToMbsOrKbs(this.props.maxFileSize) + '. ';
       }
     });
-    //this.props.enqueueSnackbar(message, {autoHideDuration: 2000});
+    setTimeout(() => {
+      toast({
+        type: 'error',
+        icon: 'exclamation circle',
+        title: 'Upload Error',
+        description: message,
+        animation: 'bounce',
+        time: 1500,
+      });
+    }, 300);
   };
 
   convertBytesToMbsOrKbs = (filesize) => {
@@ -77,9 +120,10 @@ class DropzoneArea extends React.Component {
 
   render() {
     return (
+      <div>
       <Dropzone
         accept={this.props.acceptedFiles.join(',')}
-        onDrop={this.onDrop.bind(this)}
+        onDrop={this.handleOnDrop.bind(this)}
         onDropRejected={this.handleDropRejected.bind(this)}
         maxSize={this.props.maxFileSize}>
         {({getRootProps, getInputProps}) => (
@@ -106,6 +150,8 @@ class DropzoneArea extends React.Component {
           </section>
         )}
       </Dropzone>
+        <StyledSemanticToastContainer />
+      </div>
     );
   }
 }
@@ -119,7 +165,6 @@ DropzoneArea.defaultProps = {
 
 DropzoneArea.propTypes = {
   classes: PropTypes.object.isRequired,
-  enqueueSnackbar: PropTypes.func.isRequired,
   acceptedFiles: PropTypes.array,
   filesLimit: PropTypes.number,
   maxFileSize: PropTypes.number,
