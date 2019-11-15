@@ -20,7 +20,37 @@ class Text extends Component {
     })
   };
 
+  handleRandomString = (length) => {
+    const chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let result = '';
+    for (let i = length; i > 0; --i) {
+      result += chars[Math.floor(Math.random() * chars.length)];
+    }
+    return result;
+  };
+
   handleSend = () => {
+    fetch('http://138.197.151.168:3000/waves/', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        code: 'wv' + this.handleRandomString(8),
+        text: this.state.textBox,
+      })
+    })
+      .then(response => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error('Error' + response.status);
+        }
+      })
+      .catch(error => {
+        console.log('Requested Failed. Error: ' + error);
+      });
   };
 
   renderTextButtons() {
