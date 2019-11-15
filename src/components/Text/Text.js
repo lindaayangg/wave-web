@@ -4,6 +4,7 @@ import strings from "../../res/strings";
 import {Form} from "semantic-ui-react";
 import {toast} from 'react-semantic-toasts';
 import {StyledSemanticToastContainer} from "../../res/styles";
+import {animations, icons} from "../../res/constants";
 
 class Text extends Component {
   state = {
@@ -48,10 +49,10 @@ class Text extends Component {
           setTimeout(() => {
             toast({
               type: strings.snackbar.success,
-              icon: 'check circle',
+              icon: icons.CHECK_CIRCLE,
               title: strings.snackbar.text.successTitle,
               description: strings.snackbar.text.successDescription,
-              animation: 'fade',
+              animation: animations.FADE,
               time: 1500,
             });
           }, 300);
@@ -60,10 +61,10 @@ class Text extends Component {
           setTimeout(() => {
             toast({
               type: strings.snackbar.error,
-              icon: 'exclamation circle',
+              icon: icons.EXCLAMATION_CIRCLE,
               title: strings.snackbar.text.errorTitle,
               description: strings.snackbar.text.errorDescription1 + response.status + strings.snackbar.text.errorDescription2,
-              animation: 'bounce',
+              animation: animations.BOUNCE,
               time: 1500,
             });
           }, 300);
@@ -74,10 +75,10 @@ class Text extends Component {
         setTimeout(() => {
           toast({
             type: strings.snackbar.error,
-            icon: 'exclamation circle',
+            icon: icons.EXCLAMATION_CIRCLE,
             title: strings.snackbar.text.requestErrorTitle,
             description: strings.snackbar.text.requestErrorDescription + error,
-            animation: 'bounce',
+            animation: animations.BOUNCE,
             time: 1500,
           });
         }, 300);

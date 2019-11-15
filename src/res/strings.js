@@ -26,6 +26,18 @@ const strings = {
       errorDescription2: '.',
       requestErrorTitle: 'Request Error',
       requestErrorDescription: 'Something went wrong. Request failed with Error: ',
+    },
+    dropzone: {
+      uploadErrorTitle: 'Upload Error',
+      uploadErrorDescription: 'Only one file can be uploaded.',
+      uploadSuccessTitle: 'Upload Success',
+      uploadSuccessDescription1: 'File ',
+      uploadSuccessDescription2: ' uploaded successfully.',
+      removeSuccessTitle: 'Remove Success',
+      removeSuccessDescription1: 'File ',
+      removeSuccessDescription2: ' removed successfully.',
+
+
     }
   }
 };
