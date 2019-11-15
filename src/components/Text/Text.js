@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {StyledButton, StyledButtonsWrapper, StyledTextArea} from "./styles";
 import strings from "../../res/strings";
 import {Form} from "semantic-ui-react";
+import {toast} from 'react-semantic-toasts';
+import {StyledSemanticToastContainer} from "../../res/styles";
 
 class Text extends Component {
   state = {
@@ -43,12 +45,42 @@ class Text extends Component {
     })
       .then(response => {
         if (response.ok) {
+          setTimeout(() => {
+            toast({
+              type: strings.snackbar.success,
+              icon: 'check circle',
+              title: strings.snackbar.text.successTitle,
+              description: strings.snackbar.text.successDescription,
+              animation: 'fade',
+              time: 1500,
+            });
+          }, 300);
           return response.json();
         } else {
-          throw new Error('Error' + response.status);
+          setTimeout(() => {
+            toast({
+              type: strings.snackbar.error,
+              icon: 'exclamation circle',
+              title: strings.snackbar.text.errorTitle,
+              description: strings.snackbar.text.errorDescription1 + response.status + strings.snackbar.text.errorDescription2,
+              animation: 'bounce',
+              time: 1500,
+            });
+          }, 300);
+          throw new Error('Error ' + response.status);
         }
       })
       .catch(error => {
+        setTimeout(() => {
+          toast({
+            type: strings.snackbar.error,
+            icon: 'exclamation circle',
+            title: strings.snackbar.text.requestErrorTitle,
+            description: strings.snackbar.text.requestErrorDescription + error,
+            animation: 'bounce',
+            time: 1500,
+          });
+        }, 300);
         console.log('Requested Failed. Error: ' + error);
       });
   };
@@ -89,6 +121,7 @@ class Text extends Component {
       <div>
         {this.renderTextField()}
         {this.renderTextButtons()}
+        <StyledSemanticToastContainer />
       </div>
     )
   }

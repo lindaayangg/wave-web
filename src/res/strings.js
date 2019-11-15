@@ -14,6 +14,19 @@ const strings = {
   buttons: {
     send: "Send",
     clear: "Clear",
+  },
+  snackbar: {
+    success: "success",
+    error: "error",
+    text: {
+      successTitle: 'Send Wave Success',
+      successDescription: 'Your text has been successfully waved over.',
+      errorTitle: 'Send Wave Error',
+      errorDescription1: 'Your text was not waved over with error: ',
+      errorDescription2: '.',
+      requestErrorTitle: 'Request Error',
+      requestErrorDescription: 'Something went wrong. Request failed with Error: ',
+    }
   }
 };
 

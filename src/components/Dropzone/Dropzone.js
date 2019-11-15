@@ -6,11 +6,11 @@ import {
   StyledDropzoneDiv,
   StyledGridRow,
   StyledMessage,
-  StyledSemanticToastContainer,
   StyledUploadIcon
 } from "./styles";
 import strings from "../../res/strings";
 import {toast} from 'react-semantic-toasts';
+import {StyledSemanticToastContainer} from "../../res/styles";
 
 class DropzoneArea extends React.Component {
   state = {
@@ -21,7 +21,7 @@ class DropzoneArea extends React.Component {
     if (this.state.fileObjects.length + files.length > this.props.filesLimit) {
       setTimeout(() => {
         toast({
-          type: 'error',
+          type: strings.snackbar.error,
           icon: 'exclamation circle',
           title: 'Upload Error',
           description: 'Only one file can be uploaded.',
@@ -44,7 +44,7 @@ class DropzoneArea extends React.Component {
             }
             setTimeout(() => {
               toast({
-                type: 'success',
+                type: strings.snackbar.success,
                 icon: 'check circle',
                 title: 'Upload Success',
                 description: 'File ' + file.name + ' uploaded successfully.',
@@ -72,7 +72,7 @@ class DropzoneArea extends React.Component {
       }
       setTimeout(() => {
         toast({
-          type: 'success',
+          type: strings.snackbar.success,
           icon: 'check circle',
           title: 'Remove Success',
           description: 'File ' + file.name + ' removed successfully.',
@@ -96,7 +96,7 @@ class DropzoneArea extends React.Component {
     });
     setTimeout(() => {
       toast({
-        type: 'error',
+        type: strings.snackbar.error,
         icon: 'exclamation circle',
         title: 'Upload Error',
         description: message,
