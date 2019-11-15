@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import {GridRow, Icon} from "semantic-ui-react";
-import {SemanticToastContainer} from 'react-semantic-toasts';
 
 export const StyledGridRow = styled(GridRow)`
   &&& {
@@ -37,12 +36,5 @@ export const StyledUploadIcon = styled(Icon)`
 export const StyledMessage = styled.div`
   &&& {
     font-size: 15px;
-  }
-`;
-
-
-export const StyledSemanticToastContainer = styled(SemanticToastContainer)`
-  &&& {
-    margin-top: 10px !important;
   }
 `;

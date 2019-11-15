@@ -6,11 +6,12 @@ import {
   StyledDropzoneDiv,
   StyledGridRow,
   StyledMessage,
-  StyledSemanticToastContainer,
   StyledUploadIcon
 } from "./styles";
 import strings from "../../res/strings";
 import {toast} from 'react-semantic-toasts';
+import {StyledSemanticToastContainer} from "../../res/styles";
+import {animations, icons} from "../../res/constants";
 
 class DropzoneArea extends React.Component {
   state = {
@@ -21,11 +22,11 @@ class DropzoneArea extends React.Component {
     if (this.state.fileObjects.length + files.length > this.props.filesLimit) {
       setTimeout(() => {
         toast({
-          type: 'error',
-          icon: 'exclamation circle',
-          title: 'Upload Error',
-          description: 'Only one file can be uploaded.',
-          animation: 'bounce',
+          type: strings.snackbar.error,
+          icon: icons.EXCLAMATION_CIRCLE,
+          title: strings.snackbar.dropzone.uploadErrorTitle,
+          description: strings.snackbar.dropzone.uploadErrorDescription,
+          animation: animations.BOUNCE,
           time: 1500,
         });
       }, 300);
@@ -44,11 +45,11 @@ class DropzoneArea extends React.Component {
             }
             setTimeout(() => {
               toast({
-                type: 'success',
-                icon: 'check circle',
-                title: 'Upload Success',
-                description: 'File ' + file.name + ' uploaded successfully.',
-                animation: 'fade',
+                type: strings.snackbar.success,
+                icon: icons.CHECK_CIRCLE,
+                title: strings.snackbar.dropzone.uploadSuccessTitle,
+                description: strings.snackbar.dropzone.uploadSuccessDescription1 + file.name + strings.snackbar.dropzone.uploadSuccessDescription2,
+                animation: animations.FADE,
                 time: 1500,
               });
             }, 200);
@@ -72,11 +73,11 @@ class DropzoneArea extends React.Component {
       }
       setTimeout(() => {
         toast({
-          type: 'success',
-          icon: 'check circle',
-          title: 'Remove Success',
-          description: 'File ' + file.name + ' removed successfully.',
-          animation: 'fade',
+          type: strings.snackbar.success,
+          icon: icons.CHECK_CIRCLE,
+          title: strings.snackbar.dropzone.removeSuccessTitle,
+          description: strings.snackbar.dropzone.removeSuccessDescription1 + file.name + strings.snackbar.dropzone.removeSuccessDescription2,
+          animation: animations.FADE,
           time: 1000,
         });
       }, 200);
@@ -96,11 +97,11 @@ class DropzoneArea extends React.Component {
     });
     setTimeout(() => {
       toast({
-        type: 'error',
-        icon: 'exclamation circle',
-        title: 'Upload Error',
+        type: strings.snackbar.error,
+        icon: icons.EXCLAMATION_CIRCLE,
+        title: strings.snackbar.dropzone.uploadErrorTitle,
         description: message,
-        animation: 'bounce',
+        animation: animations.BOUNCE,
         time: 1500,
       });
     }, 300);
