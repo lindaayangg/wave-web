@@ -1,30 +1,5 @@
 import styled from 'styled-components';
-import {Button, Grid, GridColumn, Header, Icon, Image, Tab, TextArea} from "semantic-ui-react";
-
-export const StyledTextArea = styled(TextArea)`
-  &&& {
-    border-color: #FA7268;
-    &:focus {
-      border-color: #002E54;
-    }
-  }
-`;
-
-export const StyledButtonsWrapper = styled.div`
-  &&& {
-    display: flex;
-    justify-content: flex-end;
-  }
-`;
-
-export const StyledButton = styled(Button)`
-  &&& {
-    color: #ffffff;
-    background-color: #FA7268;
-    width: 100px;
-    margin: 10px 0px 0px 10px;
-  }
-`;
+import {Grid, GridColumn, Header, Icon, Image} from "semantic-ui-react";
 
 export const StyledWrapper = styled(Grid)`
   &&& {
@@ -64,20 +39,6 @@ export const StyledTitleText = styled(Header)`
     padding: 0 50px 0px 50px;
     text-align: center;
     color: #FA7268;
-  }
-`;
-
-export const StyledTab = styled(Tab)`
-  &&& {
-    width: -webkit-fill-available;
-  }
-`;
-
-export const StyledTabPane = styled(Tab.Pane)`
-  &&& {
-    height: 400px;
-    padding: 20px;
-    border-radius: 10px !important;
   }
 `;
 

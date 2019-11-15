@@ -14,7 +14,7 @@ export const StyledMenu = styled(Menu)`
     background-color: #fff !important;
     display: flex;
     justify-content: flex-end;
-    border-bottom: ${props => props.scrollTop ? 'none' : '1px solid rgba(34,36,38,.15) !important'}
+    border-bottom: ${props => props.scrolltop ? 'none' : '1px solid rgba(34,36,38,.15) !important'}
   }
 `;
 

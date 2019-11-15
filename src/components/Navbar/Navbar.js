@@ -42,7 +42,7 @@ class Navbar extends React.Component {
     return (
       <StyledDiv>
         <StyledMenu
-          scrollTop={this.state.scrollTop}
+          scrolltop={this.state.scrollTop}
           text
           size="huge"
           fixed="top">

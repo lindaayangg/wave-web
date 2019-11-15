@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {GridColumn, Image} from "semantic-ui-react";
+import {GridColumn} from "semantic-ui-react";
 import {StyledBody} from "../../res/styles";
 import {
   StyledGridLeftColumn,
