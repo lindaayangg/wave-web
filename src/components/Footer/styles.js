@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Divider, Grid, GridColumn, GridRow, Header, Icon, List} from "semantic-ui-react";
+import {Divider, GridColumn, GridRow, Header} from "semantic-ui-react";
 import ListItem from "semantic-ui-react/dist/commonjs/elements/List/ListItem";
 import Button from "semantic-ui-react/dist/commonjs/elements/Button";
 
