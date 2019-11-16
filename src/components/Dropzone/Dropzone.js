@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import Dropzone from 'react-dropzone';
 import PropTypes from 'prop-types';
 import PreviewList from "../PreviewList/PreviewList";
@@ -127,23 +128,15 @@ class DropzoneArea extends React.Component {
   handleSend = (url, file) => {
     const formData = new FormData();
     formData.append('files[]', file);
-    formData.append('code', 'wv' + this.handleRandomString(8));
+    formData.set('code', 'wv' + this.handleRandomString(8));
 
     const options = {
-      method: 'POST',
       headers: {
         'Content-Type': 'multipart/form-data',
-      },
-      body: formData
+      }
     };
 
-    fetch(url, options)
-      .then(response => {
-        return response.json()
-      })
-      .catch(error => {
-        console.log(error);
-      });
+    axios.post(url, formData, options).then(r => console.log(r)).catch(e => console.log(e));
   };
 
 
@@ -153,7 +146,7 @@ class DropzoneArea extends React.Component {
         <StyledButton
           onClick={() =>
             this.handleSend('http://138.197.151.168:3000/waves',
-              this.state.fileObjects[0]
+              this.state.fileObjects[0].file
             )
           }
         >
