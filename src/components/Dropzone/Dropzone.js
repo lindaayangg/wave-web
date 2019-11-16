@@ -2,16 +2,12 @@ import React from 'react';
 import Dropzone from 'react-dropzone';
 import PropTypes from 'prop-types';
 import PreviewList from "../PreviewList/PreviewList";
-import {
-  StyledDropzoneDiv,
-  StyledGridRow,
-  StyledMessage,
-  StyledUploadIcon
-} from "./styles";
+import {StyledDropzoneDiv, StyledGridRow, StyledMessage, StyledUploadIcon} from "./styles";
 import strings from "../../res/strings";
 import {toast} from 'react-semantic-toasts';
 import {StyledSemanticToastContainer} from "../../res/styles";
 import {animations, icons} from "../../res/constants";
+import {StyledButton, StyledButtonsWrapper} from "../../res/styles";
 
 class DropzoneArea extends React.Component {
   state = {
@@ -119,39 +115,88 @@ class DropzoneArea extends React.Component {
     return size;
   };
 
+  handleRandomString = (length) => {
+    const chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let result = '';
+    for (let i = length; i > 0; --i) {
+      result += chars[Math.floor(Math.random() * chars.length)];
+    }
+    return result;
+  };
+
+  handleSend = (url, file) => {
+    const formData = new FormData();
+    formData.append('files[]', file);
+    formData.append('code', 'wv' + this.handleRandomString(8));
+
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+      body: formData
+    };
+
+    fetch(url, options)
+      .then(response => {
+        return response.json()
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  };
+
+
+  renderDropzoneButtons() {
+    return (
+      <StyledButtonsWrapper>
+        <StyledButton
+          onClick={() =>
+            this.handleSend('http://138.197.151.168:3000/waves',
+              this.state.fileObjects[0]
+            )
+          }
+        >
+          {strings.buttons.send}
+        </StyledButton>
+      </StyledButtonsWrapper>
+    )
+  }
+
   render() {
     return (
       <div>
-      <Dropzone
-        accept={this.props.acceptedFiles.join(',')}
-        onDrop={this.handleOnDrop.bind(this)}
-        onDropRejected={this.handleDropRejected.bind(this)}
-        maxSize={this.props.maxFileSize}>
-        {({getRootProps, getInputProps}) => (
-          <section>
-            <StyledDropzoneDiv
-              {...getRootProps()}
-            >
-              <input {...getInputProps()} />
-              {
-                this.state.fileObjects.length === 0 ?
-                  <StyledGridRow>
+        <Dropzone
+          accept={this.props.acceptedFiles.join(',')}
+          onDrop={this.handleOnDrop.bind(this)}
+          onDropRejected={this.handleDropRejected.bind(this)}
+          maxSize={this.props.maxFileSize}>
+          {({getRootProps, getInputProps}) => (
+            <section>
+              <StyledDropzoneDiv
+                {...getRootProps()}
+              >
+                <input {...getInputProps()} />
+                {
+                  this.state.fileObjects.length === 0 ?
+                    <StyledGridRow>
                       <StyledMessage>
                         {strings.dropzone.message}
                       </StyledMessage>
                       <StyledUploadIcon name="cloud upload" size="big"/>
-                  </StyledGridRow>
-                  :
-                  <PreviewList
-                    fileObjects={this.state.fileObjects}
-                    handleRemove={this.handleRemove.bind(this)}
-                  />
-              }
-            </StyledDropzoneDiv>
-          </section>
-        )}
-      </Dropzone>
-        <StyledSemanticToastContainer />
+                    </StyledGridRow>
+                    :
+                    <PreviewList
+                      fileObjects={this.state.fileObjects}
+                      handleRemove={this.handleRemove.bind(this)}
+                    />
+                }
+              </StyledDropzoneDiv>
+            </section>
+          )}
+        </Dropzone>
+        {this.renderDropzoneButtons()}
+        <StyledSemanticToastContainer/>
       </div>
     );
   }
@@ -161,11 +206,9 @@ DropzoneArea.defaultProps = {
   acceptedFiles: ['image/*'],
   filesLimit: 1,
   maxFileSize: 5000000,
-  onChange: () => {},
 };
 
 DropzoneArea.propTypes = {
-  classes: PropTypes.object.isRequired,
   acceptedFiles: PropTypes.array,
   filesLimit: PropTypes.number,
   maxFileSize: PropTypes.number,

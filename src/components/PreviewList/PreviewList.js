@@ -31,7 +31,7 @@ class PreviewList extends React.Component {
                 <StyledFileIcon name="file alternate"/>
             );
             return (
-              <StyledContainer>
+              <StyledContainer key={i}>
                 <StyledImageContainer>
                   {img}
                   <Fragment>

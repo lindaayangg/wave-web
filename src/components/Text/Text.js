@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import {StyledButton, StyledButtonsWrapper, StyledTextArea} from "./styles";
+import {StyledButton, StyledButtonsWrapper, StyledSemanticToastContainer} from "../../res/styles";
+import {StyledTextArea} from "./styles";
 import strings from "../../res/strings";
 import {Form} from "semantic-ui-react";
 import {toast} from 'react-semantic-toasts';
-import {StyledSemanticToastContainer} from "../../res/styles";
 import {animations, icons} from "../../res/constants";
 
 class Text extends Component {
