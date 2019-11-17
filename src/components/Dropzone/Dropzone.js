@@ -232,6 +232,7 @@ class DropzoneArea extends React.Component {
     return (
       <StyledButtonsWrapper>
         <StyledButton
+          circular
           onClick={() =>
             this.state.fileObjects.length !== 0
               ? this.handleSend('http://138.197.151.168:3000/waves', this.state.fileObjects[0].file)
