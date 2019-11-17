@@ -2362,6 +2362,11 @@ check-types@^7.3.0:
   resolved "https://registry.yarnpkg.com/check-types/-/check-types-7.4.0.tgz#0378ec1b9616ec71f774931a3c6516fad8c152f4"
   integrity sha512-YbulWHdfP99UfZ73NcUDlNJhEIDgm9Doq9GhpyXbF+7Aegi3CVV7qqMCKTTqJxlvEvnQBp9IA+dxsGN6xK/nSg==
 
+chirpsdk@^3.2.2:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/chirpsdk/-/chirpsdk-3.2.2.tgz#c7590632b4c9b1ef86a9af66b7eea83021e7beed"
+  integrity sha512-Q+m+CaLPKMLIcRt9hMN9AT4W0OIJxk74m92gWj+SbtX5vxPRqHvDDVgYU6DRHGEC7Xj/DgIsmgo+3wKCh6UciA==
+
 chokidar@^2.0.0, chokidar@^2.0.2, chokidar@^2.0.4:
   version "2.1.8"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-2.1.8.tgz#804b3a7b6a99358c3c5c61e71d8728f041cff917"

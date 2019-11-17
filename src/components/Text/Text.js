@@ -6,6 +6,7 @@ import {Form} from "semantic-ui-react";
 import {toast} from 'react-semantic-toasts';
 import {animations, icons} from "../../res/constants";
 import axios from 'axios';
+import {Chirp} from "chirpsdk";
 
 class Text extends Component {
   state = {
@@ -53,6 +54,18 @@ class Text extends Component {
               time: 3000,
             });
           }, 300);
+          Chirp({key: '62B7Ab44b74C3E671a9cddd2a'})
+            .then(sdk => {
+              sdk.start()
+                .then(() => {
+                  const rc = sdk.send(body.code);
+                  if (rc !== 0) {
+                    console.error(sdk.errorToString(rc))
+                  }
+                })
+                .catch(console.error)
+            })
+            .catch(console.error)
           return response;
         } else {
           setTimeout(() => {
