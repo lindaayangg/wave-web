@@ -136,7 +136,48 @@ class DropzoneArea extends React.Component {
       }
     };
 
-    axios.post(url, formData, options).then(r => console.log(r)).catch(e => console.log(e));
+    axios
+      .post(url, formData, options)
+      .then(response => {
+        if (response.statusText === 'OK') {
+          setTimeout(() => {
+            toast({
+              type: strings.snackbar.success,
+              icon: icons.CHECK_CIRCLE,
+              title: strings.snackbar.dropzone.successTitle,
+              description: strings.snackbar.dropzone.successDescription,
+              animation: animations.FADE,
+              time: 3000,
+            });
+          }, 300);
+          return response;
+        } else {
+          setTimeout(() => {
+            toast({
+              type: strings.snackbar.error,
+              icon: icons.EXCLAMATION_CIRCLE,
+              title: strings.snackbar.dropzone.errorTitle,
+              description: strings.snackbar.dropzone.errorDescription1 + response.statusText + strings.snackbar.dropzone.errorDescription2,
+              animation: animations.BOUNCE,
+              time: 3000,
+            });
+          }, 300);
+          throw new Error('Error ' + response.statusText);
+        }
+      })
+      .catch(error => {
+        setTimeout(() => {
+          toast({
+            type: strings.snackbar.error,
+            icon: icons.EXCLAMATION_CIRCLE,
+            title: strings.snackbar.requestErrorTitle,
+            description: strings.snackbar.requestErrorDescription + error,
+            animation: animations.BOUNCE,
+            time: 3000,
+          });
+        }, 300);
+        console.log('Requested Failed. ' + error);
+      });
   };
 
 
