@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Button, GridColumn, Header, Icon, Image} from "semantic-ui-react";
+import {GridColumn, Header, Icon, Image} from "semantic-ui-react";
 
 export const StyledLeftGrid = styled(GridColumn)`
   &&& {

@@ -8,7 +8,7 @@ const strings = {
   },
   receiveScreen: {
     title: "Receive data with a click of a button",
-    cancel: 'Cancel',
+    stop: 'Stop Listening',
     clickListen: 'Click Me to Listen for A Wave!'
   },
   navBar: {

@@ -1,21 +1,33 @@
 import React, {Component} from 'react';
 import {StyledCancelButton, StyledListenWrapper, StyledReceiveButton} from "./styles";
 import strings from "../../res/strings";
+import {Chirp, toAscii} from 'chirpsdk';
 
 class ReceiveWave extends Component {
   state = {
-    receiveClicked: false
+    startListening: false,
   };
 
-  handleReceiveOnClick = () => {
-    this.setState({
-      receiveClicked: true
-    })
+  async handleStartListeningOnClick() {
+    this.sdk = await Chirp({
+      key: '62B7Ab44b74C3E671a9cddd2a',
+      onReceiving: () => {
+        console.log('Receiving');
+      },
+      onReceived: data => {
+        if (data.length > 0) {
+          console.log(toAscii(data));
+        } else {
+          console.error('Decode failed');
+        }
+      }
+    });
+    this.setState({startListening: true});
   };
 
-  handleCancelClick = () => {
+  handleStopClick = () => {
     this.setState({
-      receiveClicked: false
+      startListening: false
     })
   };
 
@@ -23,7 +35,7 @@ class ReceiveWave extends Component {
     return (
       <StyledReceiveButton
         circular
-        onClick={this.handleReceiveOnClick}
+        onClick={() => this.handleStartListeningOnClick()}
       >
         {strings.receiveScreen.clickListen}
       </StyledReceiveButton>
@@ -34,9 +46,9 @@ class ReceiveWave extends Component {
     return (
       <StyledCancelButton
         circular
-        onClick={this.handleCancelClick}
+        onClick={this.handleStopClick}
       >
-        {strings.receiveScreen.cancel}
+        {strings.receiveScreen.stop}
       </StyledCancelButton>
     )
   };
@@ -51,17 +63,15 @@ class ReceiveWave extends Component {
   };
 
   render() {
-    const {receiveClicked} = this.state;
+    const {startListening} = this.state;
     return (
       <div>
-        {receiveClicked
+        {startListening
           ? this.renderListenForWave()
           : this.renderReceiveButton()}
       </div>
     )
   }
-
-  s
 }
 
 export default ReceiveWave;
