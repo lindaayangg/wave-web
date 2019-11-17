@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
-import {StyledButton, StyledButtonsWrapper, StyledTextArea} from "./styles";
+import {StyledButton, StyledButtonsWrapper, StyledSemanticToastContainer} from "../../res/styles";
+import {StyledTextArea} from "./styles";
 import strings from "../../res/strings";
 import {Form} from "semantic-ui-react";
 import {toast} from 'react-semantic-toasts';
-import {StyledSemanticToastContainer} from "../../res/styles";
 import {animations, icons} from "../../res/constants";
+import axios from 'axios';
 
 class Text extends Component {
   state = {
@@ -33,19 +34,15 @@ class Text extends Component {
   };
 
   handleSend = () => {
-    fetch('http://138.197.151.168:3000/waves/', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        code: 'wv' + this.handleRandomString(8),
-        text: this.state.textBox,
-      })
-    })
+    const body = {
+      code: 'wv' + this.handleRandomString(8),
+      text: this.state.textBox,
+    };
+
+    axios
+      .post('http://138.197.151.168:3000/waves', body)
       .then(response => {
-        if (response.ok) {
+        if (response.statusText === 'OK') {
           setTimeout(() => {
             toast({
               type: strings.snackbar.success,
@@ -53,22 +50,22 @@ class Text extends Component {
               title: strings.snackbar.text.successTitle,
               description: strings.snackbar.text.successDescription,
               animation: animations.FADE,
-              time: 1500,
+              time: 3000,
             });
           }, 300);
-          return response.json();
+          return response;
         } else {
           setTimeout(() => {
             toast({
               type: strings.snackbar.error,
               icon: icons.EXCLAMATION_CIRCLE,
               title: strings.snackbar.text.errorTitle,
-              description: strings.snackbar.text.errorDescription1 + response.status + strings.snackbar.text.errorDescription2,
+              description: strings.snackbar.text.errorDescription1 + response.statusText + strings.snackbar.text.errorDescription2,
               animation: animations.BOUNCE,
-              time: 1500,
+              time: 3000,
             });
           }, 300);
-          throw new Error('Error ' + response.status);
+          throw new Error('Error ' + response.statusText);
         }
       })
       .catch(error => {
@@ -76,13 +73,13 @@ class Text extends Component {
           toast({
             type: strings.snackbar.error,
             icon: icons.EXCLAMATION_CIRCLE,
-            title: strings.snackbar.text.requestErrorTitle,
-            description: strings.snackbar.text.requestErrorDescription + error,
+            title: strings.snackbar.requestErrorTitle,
+            description: strings.snackbar.requestErrorDescription + error,
             animation: animations.BOUNCE,
-            time: 1500,
+            time: 3000,
           });
         }, 300);
-        console.log('Requested Failed. Error: ' + error);
+        console.log('Requested Failed. ' + error);
       });
   };
 
@@ -122,7 +119,7 @@ class Text extends Component {
       <div>
         {this.renderTextField()}
         {this.renderTextButtons()}
-        <StyledSemanticToastContainer />
+        <StyledSemanticToastContainer/>
       </div>
     )
   }

@@ -16,7 +16,7 @@ class Tab extends Component {
       {
         menuItem: 'Images/Files', render: () =>
           <StyledTabPane>
-            <DropzoneArea></DropzoneArea>
+            <DropzoneArea/>
           </StyledTabPane>
       },
     ];
