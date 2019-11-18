@@ -9,6 +9,7 @@ import {toast} from 'react-semantic-toasts';
 import {StyledSemanticToastContainer} from "../../res/styles";
 import {animations, icons} from "../../res/constants";
 import {StyledButton, StyledButtonsWrapper} from "../../res/styles";
+import {Chirp} from "chirpsdk";
 
 class DropzoneArea extends React.Component {
   state = {
@@ -140,16 +141,63 @@ class DropzoneArea extends React.Component {
       .post(url, formData, options)
       .then(response => {
         if (response.statusText === 'OK') {
-          setTimeout(() => {
-            toast({
-              type: strings.snackbar.success,
-              icon: icons.CHECK_CIRCLE,
-              title: strings.snackbar.dropzone.successTitle,
-              description: strings.snackbar.dropzone.successDescription,
-              animation: animations.FADE,
-              time: 3000,
+          Chirp({key: '62B7Ab44b74C3E671a9cddd2a'})
+            .then(sdk => {
+              sdk.start()
+                .then(() => {
+                  const rc = sdk.send(formData.get('code'));
+                  if (rc !== 0) {
+                    setTimeout(() => {
+                      toast({
+                        type: strings.snackbar.error,
+                        icon: icons.EXCLAMATION_CIRCLE,
+                        title: strings.snackbar.chirp.chirpSendErrorTitle,
+                        description: strings.snackbar.chirp.chirpSendErrorDescription1 + sdk.errorToString(rc) + strings.snackbar.chirp.chirpSendErrorDescription2,
+                        animation: animations.BOUNCE,
+                        time: 3000,
+                      });
+                    }, 300);
+                    console.log('Chirp send request failed. ' + sdk.errorToString(rc));
+                  } else {
+                    setTimeout(() => {
+                      toast({
+                        type: strings.snackbar.success,
+                        icon: icons.CHECK_CIRCLE,
+                        title: strings.snackbar.dropzone.successTitle,
+                        description: strings.snackbar.dropzone.successDescription,
+                        animation: animations.FADE,
+                        time: 3000,
+                      });
+                    }, 300);
+                  }
+                })
+                .catch(error => {
+                  setTimeout(() => {
+                    toast({
+                      type: strings.snackbar.error,
+                      icon: icons.EXCLAMATION_CIRCLE,
+                      title: strings.snackbar.chirp.chirpStartErrorTitle,
+                      description: strings.snackbar.chirp.chirpStartErrorDescription1 + error + strings.snackbar.chirp.chirpStartErrorDescription2,
+                      animation: animations.BOUNCE,
+                      time: 3000,
+                    });
+                  }, 300);
+                  console.log('Unable to start chirp. ' + error);
+                })
+            })
+            .catch(error => {
+              setTimeout(() => {
+                toast({
+                  type: strings.snackbar.error,
+                  icon: icons.EXCLAMATION_CIRCLE,
+                  title: strings.snackbar.chirp.chirpRequestErrorTitle,
+                  description: strings.snackbar.chirp.chirpRequestErrorDescription1 + error + strings.snackbar.chirp.chirpRequestErrorDescription2,
+                  animation: animations.BOUNCE,
+                  time: 3000,
+                });
+              }, 300);
+              console.log('Chirp request failed. ' + error);
             });
-          }, 300);
           return response;
         } else {
           setTimeout(() => {
@@ -180,15 +228,23 @@ class DropzoneArea extends React.Component {
       });
   };
 
-
   renderDropzoneButtons() {
     return (
       <StyledButtonsWrapper>
         <StyledButton
           onClick={() =>
-            this.handleSend('http://138.197.151.168:3000/waves',
-              this.state.fileObjects[0].file
-            )
+            this.state.fileObjects.length !== 0
+              ? this.handleSend('http://138.197.151.168:3000/waves', this.state.fileObjects[0].file)
+              : setTimeout(() => {
+                toast({
+                  type: strings.snackbar.warning,
+                  icon: icons.EXCLAMATION_TRIANGLE,
+                  title: strings.snackbar.dropzone.emptyTitle,
+                  description: strings.snackbar.dropzone.emptyDescription,
+                  animation: animations.BOUNCE,
+                  time: 3000,
+                });
+              }, 300)
           }
         >
           {strings.buttons.send}

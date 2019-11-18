@@ -56,7 +56,7 @@ class Text extends Component {
                           type: strings.snackbar.error,
                           icon: icons.EXCLAMATION_CIRCLE,
                           title: strings.snackbar.text.chirpSendErrorTitle,
-                          description: strings.snackbar.text.chirpSendErrorDescription1 + sdk.errorToString(rc) + strings.snackbar.text.chirpSendErrorDescription2,
+                          description: strings.snackbar.chirp.chirpSendErrorDescription1 + sdk.errorToString(rc) + strings.snackbar.chirp.chirpSendErrorDescription2,
                           animation: animations.BOUNCE,
                           time: 3000,
                         });
@@ -80,8 +80,8 @@ class Text extends Component {
                       toast({
                         type: strings.snackbar.error,
                         icon: icons.EXCLAMATION_CIRCLE,
-                        title: strings.snackbar.text.chirpStartErrorTitle,
-                        description: strings.snackbar.text.chirpStartErrorDescription1 + error + strings.snackbar.text.chirpStartErrorDescription2,
+                        title: strings.snackbar.chirp.chirpStartErrorTitle,
+                        description: strings.snackbar.chirp.chirpStartErrorDescription1 + error + strings.snackbar.chirp.chirpStartErrorDescription2,
                         animation: animations.BOUNCE,
                         time: 3000,
                       });
@@ -95,7 +95,7 @@ class Text extends Component {
                     type: strings.snackbar.error,
                     icon: icons.EXCLAMATION_CIRCLE,
                     title: strings.snackbar.text.chirpRequestErrorTitle,
-                    description: strings.snackbar.text.chirpRequestErrorDescription1 + error + strings.snackbar.text.chirpRequestErrorDescription2,
+                    description: strings.snackbar.chirp.chirpRequestErrorDescription1 + error + strings.snackbar.chirp.chirpRequestErrorDescription2,
                     animation: animations.BOUNCE,
                     time: 3000,
                   });

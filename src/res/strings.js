@@ -29,17 +29,10 @@ const strings = {
       errorTitle: 'Send Wave Error',
       errorDescription1: 'Your message was not waved over with Error: ',
       errorDescription2: '.',
-      chirpSendErrorTitle: 'Chirp Send Error',
-      chirpSendErrorDescription1: 'Chirp send request failed with ',
-      chirpSendErrorDescription2: '.',
-      chirpStartErrorTitle: 'Chirp Start Error',
-      chirpStartErrorDescription1: 'Unable to start chirp with ',
-      chirpStartErrorDescription2: '.',
-      chirpRequestErrorTitle: 'Chirp Request Error',
-      chirpRequestErrorDescription1: 'Chirp request failed with ',
-      chirpRequestErrorDescription2: '.'
     },
     dropzone: {
+      emptyTitle: 'No Files Found',
+      emptyDescription: 'Please upload a file to send a wave.',
       uploadErrorTitle: 'Upload Error',
       uploadErrorDescription: 'Only one file can be uploaded.',
       uploadSuccessTitle: 'Upload Success',
@@ -53,7 +46,18 @@ const strings = {
       errorTitle: 'Send Wave Error',
       errorDescription1: 'Your file was not waved over with Error: ',
       errorDescription2: '.',
-    }
+    },
+    chirp: {
+      chirpSendErrorTitle: 'Chirp Send Error',
+      chirpSendErrorDescription1: 'Chirp send request failed with ',
+      chirpSendErrorDescription2: '.',
+      chirpStartErrorTitle: 'Chirp Start Error',
+      chirpStartErrorDescription1: 'Unable to start chirp with ',
+      chirpStartErrorDescription2: '.',
+      chirpRequestErrorTitle: 'Chirp Request Error',
+      chirpRequestErrorDescription1: 'Chirp request failed with ',
+      chirpRequestErrorDescription2: '.'
+    },
   }
 };
 
