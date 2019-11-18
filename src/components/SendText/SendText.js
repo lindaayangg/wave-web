@@ -8,7 +8,7 @@ import {animations, icons} from "../../res/constants";
 import axios from 'axios';
 import {Chirp} from "chirpsdk";
 
-class Text extends Component {
+class SendText extends Component {
   state = {
     textBox: '',
   };
@@ -188,4 +188,4 @@ class Text extends Component {
   }
 }
 
-export default Text;
+export default SendText;

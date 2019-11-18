@@ -29,7 +29,8 @@ class ReceiveWave extends Component {
   handleStopClick = () => {
     this.setState({
       startListening: false
-    })
+    });
+    this.sdk.stop();
   };
 
   renderReceiveButton = () => {
