@@ -22,6 +22,7 @@ class ReceiveWave extends Component {
         }
       }
     });
+    await this.sdk.start();
     this.setState({startListening: true});
   };
 
