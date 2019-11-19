@@ -16,6 +16,10 @@ const strings = {
       received: 'Your Wave Has Arrived Below',
     },
   },
+  homeScreen: {
+    title: 'Transfer data using sound technology',
+    subtitle: 'Wave allows for the transfer of images and text over sound.'
+  },
   navBar: {
     send: "SEND",
     receive: "RECEIVE",

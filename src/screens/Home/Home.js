@@ -8,6 +8,7 @@ import {
   StyledSubTitleText,
   StyledTitleText
 } from "./styles";
+import strings from "../../res/strings";
 
 class Home extends Component {
   render() {
@@ -16,8 +17,8 @@ class Home extends Component {
         <StyledBody>
           <StyledGridWrapper columns={2}>
             <StyledGridLeftColumn width={7} verticalAlign='middle'>
-              <StyledTitleText>Placeholder Text</StyledTitleText>
-              <StyledSubTitleText>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </StyledSubTitleText>
+              <StyledTitleText>{strings.homeScreen.title}</StyledTitleText>
+              <StyledSubTitleText>{strings.homeScreen.subtitle}</StyledSubTitleText>
             </StyledGridLeftColumn>
             <GridColumn width={9}>
               <StyledLandingImage src='https://polymagnus.com/svg/services/webDesign.svg'/>
