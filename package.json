@@ -12,10 +12,12 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "2.1.8",
     "react-semantic-toasts": "^0.6.5",
+    "react-spinners": "^0.6.1",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.88.1",
     "styled-components": "^4.4.0",
-    "typeface-roboto": "0.0.75"
+    "typeface-roboto": "0.0.75",
+    "@emotion/core": "latest"
   },
   "scripts": {
     "start": "react-scripts start",

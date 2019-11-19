@@ -20,6 +20,7 @@ import {CopyToClipboard} from "react-copy-to-clipboard";
 import {StyledSemanticToastContainer} from "../../res/styles";
 import {toast} from "react-semantic-toasts";
 import {animations, icons} from "../../res/constants";
+import {ScaleLoader} from 'react-spinners';
 
 class ReceiveWave extends Component {
   state = {
@@ -153,7 +154,13 @@ class ReceiveWave extends Component {
   renderListenForWave = () => {
     return (
       <StyledListenWrapper>
-        Spinner Placeholder
+        <ScaleLoader
+          color={'#FA7268'}
+          height={60}
+          width={7}
+          radius={10}
+          margin={'3px'}
+        />
         {this.renderCancelButton()}
       </StyledListenWrapper>
     )
