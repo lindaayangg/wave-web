@@ -6,6 +6,7 @@ import {
   StyledMessageHeader,
   StyledMessageIcon,
   StyledReceiveButton,
+  StyledReceivedImageWrapper,
   StyledReceivedMessage,
   StyledReceivedMessagesDisplay,
   StyledReceivedMessagesWrapper
@@ -27,7 +28,7 @@ class ReceiveWave extends Component {
     receivedFiles: [],
   };
 
-  openInNewTab(url) {
+  handleOpenInNewTab(url) {
     window.open(url, '_blank');
   }
 
@@ -178,11 +179,11 @@ class ReceiveWave extends Component {
               </StyledReceivedMessage>
             </CopyToClipboard>
             : this.state.receivedFiles.length !== 0
-              ? <div>
-                {this.openInNewTab(this.state.receivedFiles[0])}
+              ? <StyledReceivedImageWrapper>
+                {this.handleOpenInNewTab(this.state.receivedFiles[0])}
                 <Image size='medium'
                        src={this.state.receivedFiles[0].replace('?disposition=attachment', '')}/>
-              </div>
+              </StyledReceivedImageWrapper>
               : null
           }
         </StyledReceivedMessagesWrapper>

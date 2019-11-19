@@ -56,6 +56,14 @@ export const StyledReceivedMessagesWrapper = styled.div`
   }
 `;
 
+export const StyledReceivedImageWrapper = styled.div`
+  &&& {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+`;
+
 export const StyledMessageHeader = styled(MessageHeader)`
   &&& {
     color: #FA7268;
