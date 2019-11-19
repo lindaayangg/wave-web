@@ -13,7 +13,7 @@ import {
 import strings from "../../res/strings";
 import {Chirp, toAscii} from 'chirpsdk';
 import axios from 'axios';
-import {Icon} from "semantic-ui-react";
+import {Icon, Image} from "semantic-ui-react";
 import {CopyToClipboard} from "react-copy-to-clipboard";
 import {StyledSemanticToastContainer} from "../../res/styles";
 import {toast} from "react-semantic-toasts";
@@ -23,8 +23,13 @@ class ReceiveWave extends Component {
   state = {
     startListening: false,
     receiveStatus: strings.receiveScreen.receiveStatus.listening,
-    receivedMessage: '',
+    receivedMessage: null,
+    receivedFiles: [],
   };
+
+  openInNewTab(url) {
+    window.open(url, '_blank');
+  }
 
   handleCopyToClipboard = () => {
     setTimeout(() => {
@@ -54,11 +59,21 @@ class ReceiveWave extends Component {
               axios
                 .get('http://138.197.151.168:3000/waves/' + toAscii(data))
                 .then(response => {
-                  this.setState({
-                    receiveStatus: strings.receiveScreen.receiveStatus.received,
-                    receivedMessage: response.data.text,
-                  });
-                  console.log(response.data.text);
+                  if (response.data.text !== null) {
+                    this.setState({
+                      receiveStatus: strings.receiveScreen.receiveStatus.received,
+                      receivedMessage: response.data.text,
+                    });
+                    console.log(response.data.text);
+                  } else {
+                    this.setState({
+                      receiveStatus: strings.receiveScreen.receiveStatus.received,
+                      receivedMessage: response.data.text,
+                      receivedFiles: response.data.files,
+                    });
+                    console.log(response.data.text);
+                    console.log(response.data.files);
+                  }
                   return response;
                 })
                 .catch(error => {
@@ -105,7 +120,8 @@ class ReceiveWave extends Component {
     this.setState({
       startListening: false,
       receiveStatus: strings.receiveScreen.receiveStatus.listening,
-      receivedMessage: '',
+      receivedMessage: null,
+      receivedFiles: [],
     });
     this.sdk.stop();
   };
@@ -149,19 +165,26 @@ class ReceiveWave extends Component {
           {this.state.receiveStatus}
         </StyledMessageHeader>
         <StyledReceivedMessagesWrapper>
-          <CopyToClipboard
-            text={this.state.receivedMessage}
-            onCopy={this.handleCopyToClipboard}>
-            <StyledReceivedMessage>
-              {this.state.receivedMessage !== ''
-                ? <StyledCopyButton icon circular size='tiny'>
+          {this.state.receivedMessage !== null
+            ?
+            <CopyToClipboard
+              text={this.state.receivedMessage}
+              onCopy={this.handleCopyToClipboard}>
+              <StyledReceivedMessage>
+                <StyledCopyButton icon circular size='tiny'>
                   <Icon name='copy'/>
                 </StyledCopyButton>
-                : null
-              }
-              {this.state.receivedMessage}
-            </StyledReceivedMessage>
-          </CopyToClipboard>
+                {this.state.receivedMessage}
+              </StyledReceivedMessage>
+            </CopyToClipboard>
+            : this.state.receivedFiles.length !== 0
+              ? <div>
+                {this.openInNewTab(this.state.receivedFiles[0])}
+                <Image size='medium'
+                       src={this.state.receivedFiles[0].replace('?disposition=attachment', '')}/>
+              </div>
+              : null
+          }
         </StyledReceivedMessagesWrapper>
       </StyledReceivedMessagesDisplay>
     )

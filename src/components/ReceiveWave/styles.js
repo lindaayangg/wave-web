@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Button, Icon, Message, MessageContent, MessageHeader} from "semantic-ui-react";
+import {Button, Icon, Image, Message, MessageContent, MessageHeader} from "semantic-ui-react";
 
 export const StyledReceiveButton = styled(Button)`
   &&& {
