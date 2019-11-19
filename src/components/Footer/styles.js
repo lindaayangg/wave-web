@@ -1,13 +1,12 @@
 import styled from "styled-components";
-import {Divider, GridColumn, GridRow, Header} from "semantic-ui-react";
+import {Divider, GridColumn, GridRow, Header, List} from "semantic-ui-react";
 import ListItem from "semantic-ui-react/dist/commonjs/elements/List/ListItem";
 import Button from "semantic-ui-react/dist/commonjs/elements/Button";
 
-export const StyledDiv = styled.div`
+export const StyledFooterWrapper = styled.div`
   &&& {
     background-color: #141414;
-    height: 70vh;
-    color: white;
+    color: #a8a8a8;
     padding: 70px;
   }
 `;
@@ -32,10 +31,28 @@ export const StyledHeader = styled(Header)`
   }
 `;
 
+export const StyledListWrapper = styled(List)`
+  &&& {
+    display: flex;
+    flex-direction: column;
+    line-height: 2.5rem;
+  }
+`;
+
 export const StyledListItem = styled(ListItem)`
   &&& {
-    color: #fff !important;
-    margin: 10px 0;
+    color: #a8a8a8 !important;
+    &:hover{
+      color: #ffffff !important;
+      cursor: pointer;
+    }
+  }
+`;
+
+export const StyledListItemContact = styled(ListItem)`
+  &&& {
+    color: #a8a8a8 !important;
+    margin: 12px 0 0 0;
   }
 `;
 
@@ -43,6 +60,7 @@ export const StyledDivider = styled(Divider)`
   &&& {
     color: #fff !important;
     width: 100%;
+    margin-top: 40px;
   }
 `;
 
@@ -58,6 +76,11 @@ export const StyledSocialMediaButton = styled(Button)`
     margin: 10px;
     background-color: #FA7268;
     color: #fff;
+
+    &:focus{
+      background-color: #FA7268;
+      color: #fff;
+    }
   }
 `;
 

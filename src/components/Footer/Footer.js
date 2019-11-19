@@ -1,73 +1,84 @@
 import React, {Component} from "react";
 import {
-    StyledContainerGridColumn,
-    StyledCopyRight,
-    StyledDiv,
-    StyledDivider,
-    StyledHeader,
-    StyledInfoGridRow,
-    StyledListItem,
-    StyledSocialMediaButton,
-    StyledSocialMediaContainer
+  StyledContainerGridColumn,
+  StyledCopyRight,
+  StyledDivider,
+  StyledFooterWrapper,
+  StyledHeader,
+  StyledInfoGridRow,
+  StyledListItem, StyledListItemContact, StyledListWrapper,
+  StyledSocialMediaButton,
+  StyledSocialMediaContainer
 } from "./styles";
 import Grid from "semantic-ui-react/dist/commonjs/collections/Grid";
 import {Icon} from "semantic-ui-react";
 import List from "semantic-ui-react/dist/commonjs/elements/List";
+import strings from "../../res/strings";
+import {Link} from "react-router-dom";
 
 class Footer extends Component {
   render() {
     return (
-      <StyledDiv>
-        <Grid>
-          <StyledContainerGridColumn width={5}>
-            WAVE LOGO <Icon name="heart"/>
+      <StyledFooterWrapper>
+        <Grid relaxed='very'>
+          <StyledContainerGridColumn width={4}>
+            WAVE LOGO
+            <Icon name="heart"/>
             <StyledInfoGridRow>
               <StyledHeader>About Us</StyledHeader>
-              <div>Placeholder message</div>
-            </StyledInfoGridRow>
-            <StyledInfoGridRow>
-              <StyledHeader>Contact Us</StyledHeader>
-              <List>
-                <List.Item>
-                  <List.Icon name='users'/>
-                  <List.Content>Wave Inc.</List.Content>
-                </List.Item>
-                <List.Item>
-                  <List.Icon name='map marker alternate'/>
-                  <List.Content>Waterloo, Ontario</List.Content>
-                </List.Item>
-                <List.Item>
-                  <List.Icon name='mail'/>
-                  <List.Content>waveinc@gmail.com</List.Content>
-                </List.Item>
-              </List>
+              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
             </StyledInfoGridRow>
           </StyledContainerGridColumn>
           <StyledContainerGridColumn width={4}>
-            <StyledHeader>Information</StyledHeader>
-            <List link>
-              <StyledListItem>About Us</StyledListItem>
-              <StyledListItem>FAQ</StyledListItem>
-            </List>
+            <StyledHeader>{strings.footer.companyTitle}</StyledHeader>
+            <StyledListWrapper>
+              <StyledListItem as={Link} to='/about'>About Us</StyledListItem>
+              <StyledListItem as={Link} to='/faq'>FAQ</StyledListItem>
+              <StyledListItem as={Link} to='/placeholder'>Placeholder</StyledListItem>
+            </StyledListWrapper>
           </StyledContainerGridColumn>
           <StyledContainerGridColumn width={4}>
-            <StyledHeader>Placeholder</StyledHeader>
+            <StyledHeader>{strings.footer.contact}</StyledHeader>
+            <StyledListWrapper>
+              <StyledListItemContact>
+                <List.Icon name='users'/>
+                <List.Content>{strings.footer.companyName}</List.Content>
+              </StyledListItemContact>
+              <StyledListItemContact>
+                <List.Icon name='map marker alternate'/>
+                <List.Content>{strings.footer.location}</List.Content>
+              </StyledListItemContact>
+              <StyledListItemContact>
+                <List.Icon name='mail'/>
+                <List.Content href='mailto:xiaoling.yang@uwaterloo.ca'>{strings.footer.email}</List.Content>
+              </StyledListItemContact>
+            </StyledListWrapper>
+          </StyledContainerGridColumn>
+          <StyledContainerGridColumn width={4}>
+            <StyledHeader>{strings.footer.products}</StyledHeader>
           </StyledContainerGridColumn>
         </Grid>
         <StyledDivider/>
         <StyledSocialMediaContainer>
-          <StyledSocialMediaButton circular icon>
+          <StyledSocialMediaButton
+            circular
+            icon
+            href='https://www.facebook.com/lindayanggg'
+            target='_blank'
+          >
             <Icon name="facebook f"/>
           </StyledSocialMediaButton>
-          <StyledSocialMediaButton circular icon>
-            <Icon name="google"/>
-          </StyledSocialMediaButton>
-          <StyledSocialMediaButton circular icon>
+          <StyledSocialMediaButton
+            circular
+            icon
+            href='https://github.com/lindaayangg/Wave-Web'
+            target='_blank'
+          >
             <Icon name="github"/>
           </StyledSocialMediaButton>
-          <StyledCopyRight>2019 © Wave Inc. All Rights Reserved.</StyledCopyRight>
+          <StyledCopyRight>{strings.footer.copyRight}</StyledCopyRight>
         </StyledSocialMediaContainer>
-      </StyledDiv>
+      </StyledFooterWrapper>
     )
   }
 }

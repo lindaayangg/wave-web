@@ -79,7 +79,17 @@ const strings = {
         receiveErrorDescription: 'Decode failed. Please try again.'
       }
     },
-  }
+  },
+  footer: {
+    aboutUs: 'About Us',
+    companyTitle: 'Company',
+    products: 'Products',
+    contact: 'Contact Us',
+    companyName: 'Wave Inc.',
+    location: 'Waterloo, Ontario',
+    email: 'waveinc@gmail.com',
+    copyRight: '© Wave Inc. 2019',
+  },
 };
 
 export default strings;
