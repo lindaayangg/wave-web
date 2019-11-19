@@ -10,6 +10,12 @@ export const StyledLeftGrid = styled(GridColumn)`
   }
 `;
 
+export const StyledTabWrapper = styled.div`
+  &&& {
+    width: 43vw;
+  }
+`;
+
 export const StyledRightGrid = styled(GridColumn)`
   &&& {
     display: flex !important;

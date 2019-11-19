@@ -9,7 +9,8 @@ import {
   StyledReceivedImageWrapper,
   StyledReceivedMessage,
   StyledReceivedMessagesDisplay,
-  StyledReceivedMessagesWrapper
+  StyledReceivedMessagesWrapper,
+  StyledReceiveWaveContainer
 } from "./styles";
 import strings from "../../res/strings";
 import {Chirp, toAscii} from 'chirpsdk';
@@ -194,7 +195,7 @@ class ReceiveWave extends Component {
   render() {
     const {startListening} = this.state;
     return (
-      <div>
+      <StyledReceiveWaveContainer>
         {startListening
           ? <div>
             {this.renderListenForWave()}
@@ -203,7 +204,7 @@ class ReceiveWave extends Component {
           : this.renderReceiveButton()
         }
         <StyledSemanticToastContainer/>
-      </div>
+      </StyledReceiveWaveContainer>
     )
   }
 }

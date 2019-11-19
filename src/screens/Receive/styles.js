@@ -40,11 +40,3 @@ export const StyledTitleText = styled(Header)`
   }
 `;
 
-export const StyledLeftGridWrapper = styled.div`
-  &&& {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-`;
-

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyledLeftGrid, StyledRightGrid, StyledSendIcon, StyledSendImage, StyledTitleText} from "./styles";
+import {StyledLeftGrid, StyledRightGrid, StyledSendIcon, StyledTabWrapper, StyledTitleText} from "./styles";
 import strings from "../../res/strings";
 import Tab from "../../components/Tab/Tab";
 import {Grid} from "semantic-ui-react";
@@ -9,7 +9,9 @@ class Send extends Component {
 
   renderLeftGrid() {
     return (
-      <Tab/>
+      <StyledTabWrapper>
+        <Tab/>
+      </StyledTabWrapper>
     )
   }
 
@@ -23,7 +25,6 @@ class Send extends Component {
         {/*<StyledSendImage src='https://webdevinsights.com/wp-content/uploads/2019/08/hosting-800x445.jpg'/>*/}
         {/*<StyledSendImage src='https://beyondmart.com/web-development-rajkot.png'/>*/}
         {/*<StyledSendImage src='https://www.seekclipart.com/clipng/middle/311-3119939_send-us-a-note-clipart.png'/>*/}
-        <StyledSendImage src='https://www.transparenttextures.com/patterns/asfalt-light.png'/>
       </>
     )
   }

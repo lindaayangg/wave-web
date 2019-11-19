@@ -1,5 +1,14 @@
 import styled from "styled-components";
-import {Button, Icon, Image, Message, MessageContent, MessageHeader} from "semantic-ui-react";
+import {Button, Icon, Message, MessageContent, MessageHeader} from "semantic-ui-react";
+
+export const StyledReceiveWaveContainer = styled.div`
+  &&& {
+    width: 43vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+`;
 
 export const StyledReceiveButton = styled(Button)`
   &&& {
@@ -44,7 +53,7 @@ export const StyledListenWrapper = styled.div`
 export const StyledReceivedMessagesDisplay = styled(Message)`
   &&& {
     border-radius: 10px;
-    width: 40vw;
+    width: 43vw;
     margin-top: 40px;
     padding: 25px !important;
   }
