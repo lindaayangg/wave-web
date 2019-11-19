@@ -4,7 +4,17 @@ const strings = {
   },
   sendScreen: {
     textBoxPlaceholder: "Write a message...",
-    title: "Send data to any device without any hassle."
+    title: "Send data to any device without any hassle"
+  },
+  receiveScreen: {
+    title: "Receive data with a click of a button",
+    stop: 'Stop Listening',
+    clickListen: 'Click Me to Listen for A Wave!',
+    receiveStatus: {
+      listening: 'Listening For Your Wave...',
+      receiving: 'Receiving Your Wave...',
+      received: 'Your Wave Has Arrived Below',
+    },
   },
   navBar: {
     send: "SEND",
@@ -21,6 +31,9 @@ const strings = {
     warning: "warning",
     requestErrorTitle: 'Request Error',
     requestErrorDescription: 'Something went wrong. Request failed with ',
+    copy: {
+      copySuccessTitle: 'Copied to Clipboard!'
+    },
     text: {
       emptyTitle: 'No Message Found',
       emptyDescription: 'Please enter a message to send a wave.',
@@ -57,6 +70,14 @@ const strings = {
       chirpRequestErrorTitle: 'Chirp Request Error',
       chirpRequestErrorDescription1: 'Chirp request failed with ',
       chirpRequestErrorDescription2: '.'
+    },
+    receive: {
+      text: {
+        errorCodeTitle: 'Wave NetWork Error',
+        errorCodeDescription: 'No wave was found. Please try again.',
+        receiveErrorTitle: 'Receive Error',
+        receiveErrorDescription: 'Decode failed. Please try again.'
+      }
     },
   }
 };

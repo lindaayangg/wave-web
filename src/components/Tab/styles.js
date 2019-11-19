@@ -3,7 +3,7 @@ import {Tab} from "semantic-ui-react";
 
 export const StyledTab = styled(Tab)`
   &&& {
-    width: -webkit-fill-available;
+    width: 100% !important;
   }
 `;
 

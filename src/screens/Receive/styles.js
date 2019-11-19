@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 import {GridColumn, Header, Icon, Image} from "semantic-ui-react";
 
 export const StyledLeftGrid = styled(GridColumn)`
@@ -7,12 +7,6 @@ export const StyledLeftGrid = styled(GridColumn)`
     flex-direction: column;
     align-items: center;
     padding: 60px !important;
-  }
-`;
-
-export const StyledTabWrapper = styled.div`
-  &&& {
-    width: 43vw;
   }
 `;
 
@@ -25,7 +19,13 @@ export const StyledRightGrid = styled(GridColumn)`
   }
 `;
 
-export const StyledSendIcon = styled(Icon)`
+export const StyledReceiveImage = styled(Image)`
+  &&& {
+    width: 100ww !important;
+  }
+`;
+
+export const StyledReceiveIcon = styled(Icon)`
   &&& {
     color: #FA7268;
   }
@@ -40,8 +40,3 @@ export const StyledTitleText = styled(Header)`
   }
 `;
 
-export const StyledSendImage = styled(Image)`
-  &&& {
-    width: 100vw !important;
-  }
-`;

@@ -39,3 +39,13 @@ export const StyledButton = styled(Button)`
     }
   }
 `;
+
+export const StyledComponentWrapper = styled.div`
+  &&& {
+    margin-bottom: 0 !important;
+    padding: 0 30px;
+    display: flex;
+    vertical-align: middle;
+    height: 100vh;
+  }
+`;

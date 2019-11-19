@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {StyledTab, StyledTabPane} from "./styles";
-import Text from "../Text/Text";
+import SendText from "../SendText/SendText";
 import DropzoneArea from "../Dropzone/Dropzone";
 
 class Tab extends Component {
@@ -10,7 +10,7 @@ class Tab extends Component {
       {
         menuItem: 'Text', render: () =>
           <StyledTabPane>
-            <Text/>
+            <SendText/>
           </StyledTabPane>
       },
       {

@@ -8,7 +8,7 @@ import {animations, icons} from "../../res/constants";
 import axios from 'axios';
 import {Chirp} from "chirpsdk";
 
-class Text extends Component {
+class SendText extends Component {
   state = {
     textBox: '',
   };
@@ -148,11 +148,13 @@ class Text extends Component {
     return (
       <StyledButtonsWrapper>
         <StyledButton
+          circular
           onClick={this.handleClear}
         >
           {strings.buttons.clear}
         </StyledButton>
         <StyledButton
+          circular
           onClick={this.handleSend}
         >
           {strings.buttons.send}
@@ -186,4 +188,4 @@ class Text extends Component {
   }
 }
 
-export default Text;
+export default SendText;
