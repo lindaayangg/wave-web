@@ -162,7 +162,7 @@ class ReceiveWave extends Component {
       <StyledListenWrapper>
         <ScaleLoader
           color={'#FA7268'}
-          height={60}
+          height={50}
           width={7}
           radius={10}
           margin={'3px'}

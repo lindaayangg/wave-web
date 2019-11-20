@@ -114,6 +114,7 @@ const strings = {
   },
   footer: {
     aboutUs: 'About Us',
+    aboutUsDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
     companyTitle: 'Company',
     products: 'Products',
     contact: 'Contact Us',

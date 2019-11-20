@@ -33,14 +33,14 @@ class Footer extends Component {
             WAVE LOGO
             <Icon name="heart"/>
             <StyledInfoGridRow>
-              <StyledHeader>About Us</StyledHeader>
-              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+              <StyledHeader>{strings.footer.aboutUs}</StyledHeader>
+              <div>{strings.footer.aboutUsDescription}</div>
             </StyledInfoGridRow>
           </StyledContainerGridColumn>
           <StyledContainerGridColumn width={4}>
             <StyledHeader>{strings.footer.companyTitle}</StyledHeader>
             <StyledListWrapper>
-              <StyledListItem as={Link} to='/about'>About Us</StyledListItem>
+              <StyledListItem as={Link} to='/about'>{strings.footer.aboutUs}</StyledListItem>
               <StyledListItem as={Link} to='/faq'>FAQ</StyledListItem>
               <StyledListItem as={Link} to='/placeholder'>Placeholder</StyledListItem>
             </StyledListWrapper>
