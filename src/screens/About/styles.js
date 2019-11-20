@@ -103,16 +103,16 @@ export const StyledMemberDetailRightWrapper = styled(GridColumn)`
 export const StyledSocialMediaButton = styled(Button)`
   &&& {
     background-color: #FA7268;
-    color: #ffffff;
+    color: #FFFFFF;
     margin-right: 10px;
     &:hover{
       background-color: #FA7268;
-      color: #ffffff;
+      color: #FFFFFF;
       box-shadow: 0 3px 3px 0 rgba(0,0,0,.24), 0 0 2px 0 rgba(0,0,0,.12);
     }
     &:focus{
       background-color: #FA7268;
-      color: #ffffff;
+      color: #FFFFFF;
     }
   }
 `;

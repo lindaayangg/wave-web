@@ -1,10 +1,13 @@
 import React, {Component} from "react";
 import {
-  StyledAppleStoreBadge, StyledAppStoreBadgeWrapper,
+  StyledAppleStoreBadge,
+  StyledAppStoreBadgeWrapper,
   StyledContainerGridColumn,
   StyledCopyRight,
   StyledDivider,
-  StyledFooterWrapper, StyledGooglePlayBadge,
+  StyledEmailContent,
+  StyledFooterWrapper,
+  StyledGooglePlayBadge,
   StyledHeader,
   StyledInfoGridRow,
   StyledListItem,
@@ -14,7 +17,7 @@ import {
   StyledSocialMediaContainer
 } from "./styles";
 import Grid from "semantic-ui-react/dist/commonjs/collections/Grid";
-import {Icon, Image} from "semantic-ui-react";
+import {Icon} from "semantic-ui-react";
 import List from "semantic-ui-react/dist/commonjs/elements/List";
 import strings from "../../res/strings";
 import {Link} from "react-router-dom";
@@ -55,7 +58,7 @@ class Footer extends Component {
               </StyledListItemContact>
               <StyledListItemContact>
                 <List.Icon name='mail'/>
-                <List.Content href='mailto:xiaoling.yang@uwaterloo.ca'>{strings.footer.email}</List.Content>
+                <StyledEmailContent href='mailto:xiaoling.yang@uwaterloo.ca'>{strings.footer.email}</StyledEmailContent>
               </StyledListItemContact>
             </StyledListWrapper>
           </StyledContainerGridColumn>

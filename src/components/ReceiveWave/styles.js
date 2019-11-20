@@ -12,14 +12,14 @@ export const StyledReceiveWaveContainer = styled.div`
 
 export const StyledReceiveButton = styled(Button)`
   &&& {
-    color: #ffffff;
+    color: #FFFFFF;
     background-color: #FA7268;
     width: 200px;
     height: 200px;
     line-height: 1.5rem;
     &:hover {
       box-shadow: 0 3px 3px 3px rgba(0,0,0,.24), 0 0 2px 0 rgba(0,0,0,.12);
-      color: #ffffff;
+      color: #FFFFFF;
       background-color: #FA7268;
     }
   }
@@ -27,16 +27,16 @@ export const StyledReceiveButton = styled(Button)`
 
 export const StyledCancelButton = styled(Button)`
   &&& {
-    color: #ffffff;
+    color: #FFFFFF;
     background-color: #FA7268;
     margin-top: 30px;
     &:focus {
       background-color: #FA7268;
-      color: #ffffff;
+      color: #FFFFFF;
     }
     &:hover {
       background-color: #FA7268;
-      color: #ffffff;
+      color: #FFFFFF;
       box-shadow: 0 3px 3px 0 rgba(0,0,0,.24), 0 0 2px 0 rgba(0,0,0,.12);
     }
   }
