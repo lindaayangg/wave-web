@@ -80,6 +80,9 @@ class ReceiveWave extends Component {
                   return response;
                 })
                 .catch(error => {
+                  this.setState({
+                    receiveStatus: strings.receiveScreen.receiveStatus.failed,
+                  });
                   setTimeout(() => {
                     toast({
                       type: strings.snackbar.error,
@@ -101,6 +104,9 @@ class ReceiveWave extends Component {
             console.log(toAscii(data));
           }
         } else {
+          this.setState({
+            receiveStatus: strings.receiveScreen.receiveStatus.failed,
+          });
           setTimeout(() => {
             toast({
               type: strings.snackbar.error,

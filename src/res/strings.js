@@ -14,6 +14,7 @@ const strings = {
       listening: 'Listening For Your Wave...',
       receiving: 'Receiving Your Wave...',
       received: 'Your Wave Has Arrived Below',
+      failed: 'Unable to Find A Wave'
     },
   },
   homeScreen: {
