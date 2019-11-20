@@ -33,3 +33,9 @@ export const StyledLandingImage = styled(Image)`
     height: 100vh !important;
   }
 `;
+
+export const StyledAppStoreBadgeWrapper = styled.div`
+  &&& {
+    margin: 10px 0 0 -10px;
+  }
+`;
