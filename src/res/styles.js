@@ -24,17 +24,17 @@ export const StyledButtonsWrapper = styled.div`
 
 export const StyledButton = styled(Button)`
   &&& {
-    color: #ffffff;
+    color: #FFFFFF;
     background-color: #FA7268;
     width: 100px;
     margin: 10px 0px 0px 10px;
     &:focus {
       background-color: #FA7268;
-      color: #ffffff;
+      color: #FFFFFF;
     }
     &:hover {
       background-color: #FA7268;
-      color: #ffffff;
+      color: #FFFFFF;
       box-shadow: 0 3px 3px 0 rgba(0,0,0,.24), 0 0 2px 0 rgba(0,0,0,.12);
     }
   }
@@ -42,10 +42,10 @@ export const StyledButton = styled(Button)`
 
 export const StyledComponentWrapper = styled.div`
   &&& {
+    margin-top: 72px;
     margin-bottom: 0 !important;
-    padding: 0 30px;
     display: flex;
     vertical-align: middle;
-    height: 100vh;
+    height: fit-content;
   }
 `;

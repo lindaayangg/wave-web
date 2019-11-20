@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import {Divider, GridColumn, GridRow, Header, List} from "semantic-ui-react";
+import {Divider, GridColumn, GridRow, Header, Image, List, ListContent} from "semantic-ui-react";
 import ListItem from "semantic-ui-react/dist/commonjs/elements/List/ListItem";
 import Button from "semantic-ui-react/dist/commonjs/elements/Button";
 
 export const StyledFooterWrapper = styled.div`
   &&& {
     background-color: #141414;
-    color: #a8a8a8;
+    color: #A8A8A8;
     padding: 70px;
   }
 `;
@@ -41,9 +41,9 @@ export const StyledListWrapper = styled(List)`
 
 export const StyledListItem = styled(ListItem)`
   &&& {
-    color: #a8a8a8 !important;
+    color: #A8A8A8 !important;
     &:hover{
-      color: #ffffff !important;
+      color: #FFFFFF !important;
       cursor: pointer;
     }
   }
@@ -51,14 +51,23 @@ export const StyledListItem = styled(ListItem)`
 
 export const StyledListItemContact = styled(ListItem)`
   &&& {
-    color: #a8a8a8 !important;
+    color: #A8A8A8 !important;
     margin: 12px 0 0 0;
+  }
+`;
+
+export const StyledEmailContent = styled(ListContent)`
+  &&& {
+    color: #A8A8A8 !important;
+    &:hover {
+      color: #FFFFFF !important;
+    }
   }
 `;
 
 export const StyledDivider = styled(Divider)`
   &&& {
-    color: #fff !important;
+    color: #FFFFFF !important;
     width: 100%;
     margin-top: 40px;
   }
@@ -75,11 +84,14 @@ export const StyledSocialMediaButton = styled(Button)`
   &&& {
     margin: 10px;
     background-color: #FA7268;
-    color: #fff;
-
+    color: #FFFFFF;
+    &:hover {
+      background-color: #FCA099;
+      color: #404040;
+    }
     &:focus{
       background-color: #FA7268;
-      color: #fff;
+      color: #FFFFFF;
     }
   }
 `;
@@ -87,5 +99,23 @@ export const StyledSocialMediaButton = styled(Button)`
 export const StyledCopyRight = styled.div`
   &&& {
     margin-top: 15px;
+  }
+`;
+
+export const StyledAppStoreBadgeWrapper = styled.div`
+  &&& {
+    margin-left: -10px;
+  }
+`;
+
+export const StyledAppleStoreBadge = styled(Image)`
+  &&& {
+    padding: 0 10px 0 10px;
+  }
+`;
+
+export const StyledGooglePlayBadge = styled(Image)`
+  &&& {
+    padding-right: 10px;
   }
 `;

@@ -3,7 +3,7 @@ import {Menu} from "semantic-ui-react";
 
 export const StyledDiv = styled.div`
   &&& {
-    background-color: #fff;
+    background-color: #FFFFFF;
   }
 `;
 
@@ -11,7 +11,7 @@ export const StyledMenu = styled(Menu)`
   &&& {
     height: 72px;
     padding-right: 25px !important;
-    background-color: #fff !important;
+    background-color: #FFFFFF !important;
     display: flex;
     justify-content: flex-end;
     border-bottom: ${props => props.scrolltop ? 'none' : '1px solid rgba(34,36,38,.15) !important'}

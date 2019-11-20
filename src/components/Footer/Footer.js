@@ -1,12 +1,18 @@
 import React, {Component} from "react";
 import {
+  StyledAppleStoreBadge,
+  StyledAppStoreBadgeWrapper,
   StyledContainerGridColumn,
   StyledCopyRight,
   StyledDivider,
+  StyledEmailContent,
   StyledFooterWrapper,
+  StyledGooglePlayBadge,
   StyledHeader,
   StyledInfoGridRow,
-  StyledListItem, StyledListItemContact, StyledListWrapper,
+  StyledListItem,
+  StyledListItemContact,
+  StyledListWrapper,
   StyledSocialMediaButton,
   StyledSocialMediaContainer
 } from "./styles";
@@ -15,6 +21,8 @@ import {Icon} from "semantic-ui-react";
 import List from "semantic-ui-react/dist/commonjs/elements/List";
 import strings from "../../res/strings";
 import {Link} from "react-router-dom";
+import google_play from '../../res/images/google_play_badge.png';
+import apple_store from '../../res/images/apple_store_badge.svg';
 
 class Footer extends Component {
   render() {
@@ -50,12 +58,26 @@ class Footer extends Component {
               </StyledListItemContact>
               <StyledListItemContact>
                 <List.Icon name='mail'/>
-                <List.Content href='mailto:xiaoling.yang@uwaterloo.ca'>{strings.footer.email}</List.Content>
+                <StyledEmailContent href='mailto:xiaoling.yang@uwaterloo.ca'>{strings.footer.email}</StyledEmailContent>
               </StyledListItemContact>
             </StyledListWrapper>
           </StyledContainerGridColumn>
           <StyledContainerGridColumn width={4}>
             <StyledHeader>{strings.footer.products}</StyledHeader>
+            <StyledAppStoreBadgeWrapper>
+              <StyledGooglePlayBadge
+                src={google_play}
+                size='small'
+                href='http://google.com'
+                target='_blank'
+              />
+              <StyledAppleStoreBadge
+                src={apple_store}
+                size='small'
+                href='http://google.com'
+                target='_blank'
+              />
+            </StyledAppStoreBadgeWrapper>
           </StyledContainerGridColumn>
         </Grid>
         <StyledDivider/>

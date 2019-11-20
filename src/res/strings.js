@@ -21,6 +21,33 @@ const strings = {
     title: 'Transfer data using sound technology',
     subtitle: 'Wave allows for the transfer of images and text over sound.'
   },
+  aboutScreen: {
+    aboutUsTitle: 'About Us',
+    subtitle: 'We are Wave, and we help you transfer data between platforms hassleless.',
+    aboutText: 'Wave revolves around everyone\'s daily inconvenience of URL links and transfer of files and images. Transferring files typically involves steps such as e-mailing, uploading to the cloud and sharing a link, or syncing up with bluetooth. It only makes sense that there exists a solution that streamlines this process for ALL devices.',
+    meetTeam: {
+      title: 'Meet the Team',
+      linda: {
+        name: 'Linda Yang',
+        title: 'Co-Founder',
+        detail: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+      },
+      david: {
+        name: 'David Zhang',
+        title: 'Co-Founder',
+        detail: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      },
+    },
+    inspiration: {
+      title: 'Inspiration',
+      hackathon: {
+        title: 'It All Began As A Hackathon Idea',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        pictureDescription1: 'Demo at HackThe6ix',
+        pictureDescription2: 'Top 10 Finalist at HackThe6ix',
+      }
+    },
+  },
   navBar: {
     send: "SEND",
     receive: "RECEIVE",
