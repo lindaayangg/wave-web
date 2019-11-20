@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import {Divider, GridColumn, GridRow, Header, List} from "semantic-ui-react";
+import {Divider, GridColumn, GridRow, Header, Image, List} from "semantic-ui-react";
 import ListItem from "semantic-ui-react/dist/commonjs/elements/List/ListItem";
 import Button from "semantic-ui-react/dist/commonjs/elements/Button";
 
 export const StyledFooterWrapper = styled.div`
   &&& {
     background-color: #141414;
-    color: #a8a8a8;
+    color: #A8A8A8;
     padding: 70px;
   }
 `;
@@ -75,11 +75,14 @@ export const StyledSocialMediaButton = styled(Button)`
   &&& {
     margin: 10px;
     background-color: #FA7268;
-    color: #fff;
-
+    color: #ffffff;
+    &:hover {
+      background-color: #FCA099;
+      color: #404040;
+    }
     &:focus{
       background-color: #FA7268;
-      color: #fff;
+      color: #ffffff;
     }
   }
 `;
@@ -87,5 +90,23 @@ export const StyledSocialMediaButton = styled(Button)`
 export const StyledCopyRight = styled.div`
   &&& {
     margin-top: 15px;
+  }
+`;
+
+export const StyledAppStoreBadgeWrapper = styled.div`
+  &&& {
+    margin-left: -10px;
+  }
+`;
+
+export const StyledAppleStoreBadge = styled(Image)`
+  &&& {
+    padding: 0 10px 0 10px;
+  }
+`;
+
+export const StyledGooglePlayBadge = styled(Image)`
+  &&& {
+    padding-right: 10px;
   }
 `;
