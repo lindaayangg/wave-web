@@ -30,6 +30,7 @@ import '@brainhubeu/react-carousel/lib/style.css';
 import hackthe6ix from '../../res/images/hackthe6ix.jpg';
 import hackthe6ix_stage from '../../res/images/hackthe6ix_stage.jpg';
 import hackthe6ix_stage1 from '../../res/images/hackthe6ix_stage1.jpg';
+import linda from '../../res/images/linda.jpg';
 
 class About extends Component {
 
@@ -239,7 +240,7 @@ class About extends Component {
               </StyledSocialMediaButton>
             </StyledMemberDetailRightWrapper>
             <GridColumn width={5}>
-              <Image src='https://devlinda.com/assets/img/profile.png' rounded/>
+              <Image src={linda} rounded/>
             </GridColumn>
           </StyledMemberWrapper>
         </StyledTeamWrapper>
