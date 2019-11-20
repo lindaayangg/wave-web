@@ -27,9 +27,11 @@ import strings from "../../res/strings";
 import {Card, GridColumn, Icon, Image} from "semantic-ui-react";
 import Carousel from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
-import hackthe6ix from '../../res/images/hackthe6ix.jpg';
-import hackthe6ix_stage from '../../res/images/hackthe6ix_stage.jpg';
+import hackthe6ix_demo2 from '../../res/images/hackthe6ix_demo2.jpg';
+import hackthe6ix_demo1 from '../../res/images/hackthe6ix_demo1.jpg';
+import hackthe6ix_stage3 from '../../res/images/hackthe6ix_stage3.jpg';
 import hackthe6ix_stage1 from '../../res/images/hackthe6ix_stage1.jpg';
+import hackthe6ix_stage2 from '../../res/images/hackthe6ix_stage2.jpg';
 import linda from '../../res/images/linda.jpg';
 
 class About extends Component {
@@ -65,7 +67,17 @@ class About extends Component {
       <Carousel {...carouselSettings}>
         <StyledHackthonCardWrapper>
           <Card>
-            <Image src={hackthe6ix} size='medium'/>
+            <Image src={hackthe6ix_demo1} size='medium'/>
+            <Card.Content>
+              <Card.Description>
+                {strings.aboutScreen.inspiration.hackathon.pictureDescription1}
+              </Card.Description>
+            </Card.Content>
+          </Card>
+        </StyledHackthonCardWrapper>
+        <StyledHackthonCardWrapper>
+          <Card>
+            <Image src={hackthe6ix_demo2} size='medium'/>
             <Card.Content>
               <Card.Description>
                 {strings.aboutScreen.inspiration.hackathon.pictureDescription1}
@@ -85,7 +97,17 @@ class About extends Component {
         </StyledHackthonCardWrapper>
         <StyledHackthonCardWrapper>
           <Card>
-            <Image src={hackthe6ix_stage} size='medium'/>
+            <Image src={hackthe6ix_stage2} size='medium'/>
+            <Card.Content>
+              <Card.Description>
+                {strings.aboutScreen.inspiration.hackathon.pictureDescription2}
+              </Card.Description>
+            </Card.Content>
+          </Card>
+        </StyledHackthonCardWrapper>
+        <StyledHackthonCardWrapper>
+          <Card>
+            <Image src={hackthe6ix_stage3} size='medium'/>
             <Card.Content>
               <Card.Description>
                 {strings.aboutScreen.inspiration.hackathon.pictureDescription2}
