@@ -10,8 +10,7 @@ import {
   StyledReceivedImageWrapper,
   StyledReceivedMessage,
   StyledReceivedMessagesDisplay,
-  StyledReceivedMessagesWrapper,
-  StyledReceiveWaveContainer
+  StyledReceivedMessagesWrapper
 } from "./styles";
 import strings from "../../res/strings";
 import {Chirp, toAscii} from 'chirpsdk';

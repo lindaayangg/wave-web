@@ -11,7 +11,19 @@ export const StyledGridWrapper = styled(Grid)`
 
 export const StyledGridLeftColumn = styled(GridColumn)`
   &&& {
-    padding: 0px 80px 80px 80px !important;
+    padding: 50px 80px 20px 80px !important;
+    @media (max-width: 767px) {
+      padding: 50px 40px 20px 40px !important;
+    }
+  }
+`;
+
+export const StyledGridRightColumn = styled(GridColumn)`
+  &&& {
+    padding: 50px 80px 20px 80px !important;
+    @media (max-width: 767px) {
+      padding: 50px 40px 20px 40px !important;
+    }
   }
 `;
 
@@ -30,7 +42,7 @@ export const StyledSubTitleText = styled(HeaderSubHeader)`
 
 export const StyledLandingImage = styled(Image)`
   &&& {
-    height: 100vh !important;
+    height: 100% !important;
   }
 `;
 

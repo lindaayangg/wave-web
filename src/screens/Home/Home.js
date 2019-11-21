@@ -1,9 +1,10 @@
 import React, {Component} from "react";
-import {GridColumn, Image} from "semantic-ui-react";
-import {StyledBody, StyledComponentWrapper} from "../../res/styles";
+import {Image} from "semantic-ui-react";
+import {StyledComponentWrapper} from "../../res/styles";
 import {
   StyledAppStoreBadgeWrapper,
   StyledGridLeftColumn,
+  StyledGridRightColumn,
   StyledGridWrapper,
   StyledLandingImage,
   StyledSubTitleText,
@@ -19,7 +20,7 @@ class Home extends Component {
 
       <StyledComponentWrapper>
         <StyledGridWrapper columns={2}>
-          <StyledGridLeftColumn width={7} verticalAlign='middle'>
+          <StyledGridLeftColumn computer={7} tablet={16} verticalAlign='middle'>
             <StyledTitleText>{strings.homeScreen.title}</StyledTitleText>
             <StyledSubTitleText>{strings.homeScreen.subtitle}</StyledSubTitleText>
             <StyledAppStoreBadgeWrapper>
@@ -37,9 +38,9 @@ class Home extends Component {
               />
             </StyledAppStoreBadgeWrapper>
           </StyledGridLeftColumn>
-          <GridColumn width={9}>
+          <StyledGridRightColumn computer={9} tablet={16}>
             <StyledLandingImage src='https://polymagnus.com/svg/services/webDesign.svg'/>
-          </GridColumn>
+          </StyledGridRightColumn>
         </StyledGridWrapper>
       </StyledComponentWrapper>
     )
