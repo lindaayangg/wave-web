@@ -17,7 +17,6 @@ import google_play from '../../res/images/google_play_badge.png';
 class Home extends Component {
   render() {
     return (
-
       <StyledComponentWrapper>
         <StyledGridWrapper columns={2}>
           <StyledGridLeftColumn computer={7} tablet={16} verticalAlign='middle'>
