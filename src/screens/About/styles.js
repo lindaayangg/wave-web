@@ -45,6 +45,12 @@ export const StyledAboutText = styled.p`
   &&& {
     width: 55%;
     line-height: 1.6rem;
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+    @media (min-width: 768px) and (max-width: 1183px) {
+      width: 80%;
+    }
   }
 `;
 
@@ -135,7 +141,7 @@ export const StyledSocialMediaButton = styled(Button)`
   }
 `;
 
-export const StyledCarouselWrapper = styled.div`
+export const StyledInspirationDetailWrapper = styled.div`
   &&& {
     display: flex;
     flex-direction: column;
@@ -147,6 +153,17 @@ export const StyledCarouselWrapper = styled.div`
 export const StyledHackathonGrid = styled(Grid)`
   &&& {
     width: 75%;
+    @media (max-width: 1183px) {
+      width: 100%;
+    }
+  }
+`;
+
+export const StyledCarouselWrapper = styled(GridColumn)`
+  &&& {
+    @media (min-width: 768px) and (max-width: 991px) {
+      padding: 0 150px 0 150px;
+    }
   }
 `;
 
@@ -154,6 +171,9 @@ export const StyledHackathonDescriptionWrapper = styled(GridColumn)`
   &&& {
     padding-left: 50px !important;
     text-align: left;
+    @media (max-width: 767px) {
+      padding-left: 10px !important;
+    }
   }
 `;
 

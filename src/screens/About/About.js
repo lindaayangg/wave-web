@@ -11,6 +11,7 @@ import {
   StyledHackathonGrid,
   StyledHackathonTitle,
   StyledHackthonCardWrapper,
+  StyledInspirationDetailWrapper,
   StyledMemberDetailLeftWrapper,
   StyledMemberDetailRightWrapper,
   StyledMemberImage,
@@ -52,96 +53,6 @@ class About extends Component {
           </StyledAboutText>
         </StyledAboutTextWrapper>
       </div>
-    )
-  };
-
-  renderCarousel = () => {
-    const carouselSettings = {
-      infinite: true,
-      animationSpeed: 1000,
-      slidesPerPage: 1,
-      arrowLeft: <StyledArrows name="angle double left" size='large'/>,
-      arrowRight: <StyledArrows name="angle double right" size='large'/>,
-      addArrowClickHandler: true,
-    };
-    return (
-      <Carousel {...carouselSettings}>
-        <StyledHackthonCardWrapper>
-          <Card>
-            <Image src={hackthe6ix_demo1} size='medium'/>
-            <Card.Content>
-              <Card.Description>
-                {strings.aboutScreen.inspiration.hackathon.pictureDescription1}
-              </Card.Description>
-            </Card.Content>
-          </Card>
-        </StyledHackthonCardWrapper>
-        <StyledHackthonCardWrapper>
-          <Card>
-            <Image src={hackthe6ix_demo2} size='medium'/>
-            <Card.Content>
-              <Card.Description>
-                {strings.aboutScreen.inspiration.hackathon.pictureDescription1}
-              </Card.Description>
-            </Card.Content>
-          </Card>
-        </StyledHackthonCardWrapper>
-        <StyledHackthonCardWrapper>
-          <Card>
-            <Image src={hackthe6ix_stage1} size='medium'/>
-            <Card.Content>
-              <Card.Description>
-                {strings.aboutScreen.inspiration.hackathon.pictureDescription2}
-              </Card.Description>
-            </Card.Content>
-          </Card>
-        </StyledHackthonCardWrapper>
-        <StyledHackthonCardWrapper>
-          <Card>
-            <Image src={hackthe6ix_stage2} size='medium'/>
-            <Card.Content>
-              <Card.Description>
-                {strings.aboutScreen.inspiration.hackathon.pictureDescription2}
-              </Card.Description>
-            </Card.Content>
-          </Card>
-        </StyledHackthonCardWrapper>
-        <StyledHackthonCardWrapper>
-          <Card>
-            <Image src={hackthe6ix_stage3} size='medium'/>
-            <Card.Content>
-              <Card.Description>
-                {strings.aboutScreen.inspiration.hackathon.pictureDescription2}
-              </Card.Description>
-            </Card.Content>
-          </Card>
-        </StyledHackthonCardWrapper>
-      </Carousel>
-    )
-  };
-
-  renderInspiration = () => {
-    return (
-      <StyledSectionWrapper>
-        <StyledTitleText>
-          {strings.aboutScreen.inspiration.title}
-        </StyledTitleText>
-        <StyledCarouselWrapper>
-          <StyledHackathonGrid columns={2}>
-            <GridColumn width={7}>
-              {this.renderCarousel()}
-            </GridColumn>
-            <StyledHackathonDescriptionWrapper width={9}>
-              <StyledHackathonTitle>
-                {strings.aboutScreen.inspiration.hackathon.title}
-              </StyledHackathonTitle>
-              <StyledHackathonDescription>
-                {strings.aboutScreen.inspiration.hackathon.description}
-              </StyledHackathonDescription>
-            </StyledHackathonDescriptionWrapper>
-          </StyledHackathonGrid>
-        </StyledCarouselWrapper>
-      </StyledSectionWrapper>
     )
   };
 
@@ -271,6 +182,100 @@ class About extends Component {
       </StyledSectionWrapper>
     )
   };
+
+
+  renderCarousel = () => {
+    const carouselSettings = {
+      infinite: true,
+      animationSpeed: 1000,
+      slidesPerPage: 1,
+      arrowLeft: <StyledArrows name="angle double left" size='large'/>,
+      arrowRight: <StyledArrows name="angle double right" size='large'/>,
+      addArrowClickHandler: true,
+    };
+    return (
+      <Carousel {...carouselSettings}>
+        <StyledHackthonCardWrapper>
+          <Card>
+            <Image src={hackthe6ix_demo1} size='medium'/>
+            <Card.Content>
+              <Card.Description>
+                {strings.aboutScreen.inspiration.hackathon.pictureDescription1}
+              </Card.Description>
+            </Card.Content>
+          </Card>
+        </StyledHackthonCardWrapper>
+        <StyledHackthonCardWrapper>
+          <Card>
+            <Image src={hackthe6ix_demo2} size='medium'/>
+            <Card.Content>
+              <Card.Description>
+                {strings.aboutScreen.inspiration.hackathon.pictureDescription1}
+              </Card.Description>
+            </Card.Content>
+          </Card>
+        </StyledHackthonCardWrapper>
+        <StyledHackthonCardWrapper>
+          <Card>
+            <Image src={hackthe6ix_stage1} size='medium'/>
+            <Card.Content>
+              <Card.Description>
+                {strings.aboutScreen.inspiration.hackathon.pictureDescription2}
+              </Card.Description>
+            </Card.Content>
+          </Card>
+        </StyledHackthonCardWrapper>
+        <StyledHackthonCardWrapper>
+          <Card>
+            <Image src={hackthe6ix_stage2} size='medium'/>
+            <Card.Content>
+              <Card.Description>
+                {strings.aboutScreen.inspiration.hackathon.pictureDescription2}
+              </Card.Description>
+            </Card.Content>
+          </Card>
+        </StyledHackthonCardWrapper>
+        <StyledHackthonCardWrapper>
+          <Card>
+            <Image src={hackthe6ix_stage3} size='medium'/>
+            <Card.Content>
+              <Card.Description>
+                {strings.aboutScreen.inspiration.hackathon.pictureDescription2}
+              </Card.Description>
+            </Card.Content>
+          </Card>
+        </StyledHackthonCardWrapper>
+      </Carousel>
+    )
+  };
+
+  renderInspiration = () => {
+    return (
+      <StyledSectionWrapper>
+        <StyledTitleText>
+          {strings.aboutScreen.inspiration.title}
+        </StyledTitleText>
+        <StyledInspirationDetailWrapper>
+          <StyledHackathonGrid columns={2}>
+            <GridColumn computer={7} tablet={16} mobile={16}>
+              <StyledCarouselWrapper>
+                {this.renderCarousel()}
+              </StyledCarouselWrapper>
+            </GridColumn>
+            <StyledHackathonDescriptionWrapper computer={9} tablet={16} mobile={16}>
+              <StyledHackathonTitle>
+                {strings.aboutScreen.inspiration.hackathon.title}
+              </StyledHackathonTitle>
+              <StyledHackathonDescription>
+                {strings.aboutScreen.inspiration.hackathon.description}
+              </StyledHackathonDescription>
+            </StyledHackathonDescriptionWrapper>
+          </StyledHackathonGrid>
+        </StyledInspirationDetailWrapper>
+      </StyledSectionWrapper>
+    )
+  };
+
 
   render() {
     return (
