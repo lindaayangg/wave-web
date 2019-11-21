@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import {GridColumn, Header, Icon, Image} from "semantic-ui-react";
 
-export const StyledLeftGridWWrapper = styled(GridColumn)`
+export const StyledLeftGrid = styled(GridColumn)`
   &&& {
     padding: 60px 100px !important;
   }

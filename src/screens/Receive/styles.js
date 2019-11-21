@@ -3,10 +3,7 @@ import {GridColumn, Header, Icon, Image} from "semantic-ui-react";
 
 export const StyledLeftGrid = styled(GridColumn)`
   &&& {
-    display: flex !important;
-    flex-direction: column;
-    align-items: center;
-    padding: 60px !important;
+    padding: 60px 100px !important;
   }
 `;
 
@@ -21,22 +18,37 @@ export const StyledRightGrid = styled(GridColumn)`
 
 export const StyledReceiveImage = styled(Image)`
   &&& {
-    width: 100ww !important;
+    margin-top: 50px;
   }
 `;
 
 export const StyledReceiveIcon = styled(Icon)`
   &&& {
     color: #FA7268;
+    font-size: 3rem !important;
+  }
+`;
+
+export const StyledTitleWrapper = styled.div`
+  &&& {
+    display: flex;
   }
 `;
 
 export const StyledTitleText = styled(Header)`
   &&& {
     font-size: 35px;
-    padding: 0 50px 0px 50px;
+    padding-left: 20px;
     text-align: center;
     color: #FA7268;
+    margin-top: 0;
+  }
+`;
+
+export const StyledReceiveWaveWrapper = styled.div`
+  &&& { 
+    width: 50vw;
+    margin-top: 50px;
   }
 `;
 

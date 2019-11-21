@@ -7,10 +7,11 @@ const strings = {
     title: "Send A Wave"
   },
   receiveScreen: {
-    title: "Receive data with a click of a button",
+    title: "Receive A Wave",
     stop: 'Stop Listening',
     clickListen: 'Click Me to Listen for A Wave!',
     receiveStatus: {
+      start: 'Your Wave Will Arrive Below',
       listening: 'Listening For Your Wave...',
       receiving: 'Receiving Your Wave...',
       received: 'Your Wave Has Arrived Below',

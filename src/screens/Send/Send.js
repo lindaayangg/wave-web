@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {
-  StyledLeftGridWWrapper,
+  StyledLeftGrid,
   StyledRightGrid,
   StyledSendIcon,
   StyledSendImage,
@@ -41,9 +41,9 @@ class Send extends Component {
     return (
       <StyledComponentWrapper>
         <Grid columns={2}>
-          <StyledLeftGridWWrapper width={10} verticalAlign="middle">
+          <StyledLeftGrid width={10} verticalAlign="middle">
             {this.renderLeftGrid()}
-          </StyledLeftGridWWrapper>
+          </StyledLeftGrid>
           <StyledRightGrid width={6} verticalAlign='middle'>
             <StyledSendImage src='https://www.seekclipart.com/clipng/middle/311-3119939_send-us-a-note-clipart.png'/>
           </StyledRightGrid>

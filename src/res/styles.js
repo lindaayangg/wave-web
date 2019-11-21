@@ -43,7 +43,7 @@ export const StyledButton = styled(Button)`
 export const StyledComponentWrapper = styled.div`
   &&& {
     margin-top: 72px;
-    margin-bottom: 0 !important;
+    margin-bottom: 50px !important;
     display: flex;
     vertical-align: middle;
     height: fit-content;
