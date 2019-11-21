@@ -4,7 +4,7 @@ const strings = {
   },
   sendScreen: {
     textBoxPlaceholder: "Write a message...",
-    title: "Send data to any device without any hassle"
+    title: "Send A Wave"
   },
   receiveScreen: {
     title: "Receive data with a click of a button",
