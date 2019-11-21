@@ -36,21 +36,15 @@ class Receive extends Component {
     )
   }
 
-  renderRightGrid() {
-    return (
-      <StyledReceiveImage src='https://www.seekclipart.com/clipng/middle/311-3119939_send-us-a-note-clipart.png'/>
-    )
-  }
-
   render() {
     return (
       <StyledComponentWrapper>
         <Grid columns={2} relaxed="very">
-          <StyledLeftGrid width={10} verticalAlign="middle">
+          <StyledLeftGrid computer={10} tablet={16} mobile={16} verticalAlign="middle">
             {this.renderLeftGrid()}
           </StyledLeftGrid>
-          <StyledRightGrid width={6} verticalAlign="middle">
-            {this.renderRightGrid()}
+          <StyledRightGrid  computer={6} tablet={16} mobile={16} verticalAlign="middle">
+            <StyledReceiveImage src='https://www.seekclipart.com/clipng/middle/311-3119939_send-us-a-note-clipart.png'/>
           </StyledRightGrid>
         </Grid>
       </StyledComponentWrapper>

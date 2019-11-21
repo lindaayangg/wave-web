@@ -5,7 +5,7 @@ export const StyledLeftGrid = styled(GridColumn)`
   &&& {
     padding: 50px 100px !important;
     @media (max-width: 991px) {
-      padding: 50px 50px !important; 
+      padding: 50px 50px 10px 50px !important; 
     }
   }
 `;
@@ -43,7 +43,7 @@ export const StyledSendIcon = styled(Icon)`
 export const StyledTitleText = styled(Header)`
   &&& {
     font-size: 35px;
-    padding-left: 20px;
+    padding-left: 5px;
     text-align: center;
     color: #FA7268;
     margin-top: 0;
