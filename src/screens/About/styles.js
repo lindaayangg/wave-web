@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Button, Grid, GridColumn, Header, Icon} from "semantic-ui-react";
+import {Button, Grid, GridColumn, Header, Icon, Image} from "semantic-ui-react";
 import HeaderSubHeader from "semantic-ui-react/dist/commonjs/elements/Header/HeaderSubheader";
 
 export const StyledAboutWrapper = styled.div`
@@ -60,6 +60,17 @@ export const StyledTeamWrapper = styled.div`
 export const StyledMemberWrapper = styled(Grid)`
   &&& {
     width: 70%;
+    @media (max-width: 1183px) {
+      width: 100%;
+    }
+  }
+`;
+
+export const StyledMemberImage = styled(Image)`
+  &&& {
+    @media (max-width: 767px) {
+      width: 50%;
+    }
   }
 `;
 
@@ -86,17 +97,24 @@ export const StyledMemberInfo = styled.p`
   }
 `;
 
-export const StyledMemberDetailLeftWrapper = styled(GridColumn)`
-  &&& {
-    text-align: left;
-    padding-left: 70px !important;
-  }
-`;
-
 export const StyledMemberDetailRightWrapper = styled(GridColumn)`
   &&& {
     text-align: left;
+    padding-left: 70px !important;
+    @media (max-width: 767px) {
+      padding-left: 10px !important;
+      padding-right: 0 !important;
+    }
+  }
+`;
+
+export const StyledMemberDetailLeftWrapper = styled(GridColumn)`
+  &&& {
+    text-align: left;
     padding-right: 70px !important;
+    @media (max-width: 767px) {
+      padding-right: 0 !important;
+    }
   }
 `;
 

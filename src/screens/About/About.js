@@ -13,6 +13,7 @@ import {
   StyledHackthonCardWrapper,
   StyledMemberDetailLeftWrapper,
   StyledMemberDetailRightWrapper,
+  StyledMemberImage,
   StyledMemberInfo,
   StyledMemberName,
   StyledMemberTitle,
@@ -152,10 +153,10 @@ class About extends Component {
         </StyledTitleText>
         <StyledTeamWrapper>
           <StyledMemberWrapper columns={2}>
-            <GridColumn width={5}>
-              <Image src='https://devlinda.com/assets/img/profile.png' rounded/>
+            <GridColumn computer={5} tablet={5} mobile={16}>
+              <StyledMemberImage src='https://devlinda.com/assets/img/profile.png' rounded/>
             </GridColumn>
-            <StyledMemberDetailLeftWrapper width={11}>
+            <StyledMemberDetailRightWrapper computer={11} tablet={11} mobile={16}>
               <StyledMemberName>
                 {strings.aboutScreen.meetTeam.david.name}
               </StyledMemberName>
@@ -205,12 +206,16 @@ class About extends Component {
               >
                 <Icon name='facebook f'/>
               </StyledSocialMediaButton>
-            </StyledMemberDetailLeftWrapper>
+            </StyledMemberDetailRightWrapper>
           </StyledMemberWrapper>
         </StyledTeamWrapper>
+
         <StyledTeamWrapper>
-          <StyledMemberWrapper columns={2}>
-            <StyledMemberDetailRightWrapper width={11}>
+          <StyledMemberWrapper columns={2} reversed="computer tablet">
+            <GridColumn computer={5} tablet={5} mobile={16}>
+              <StyledMemberImage src={linda} rounded/>
+            </GridColumn>
+            <StyledMemberDetailLeftWrapper computer={11} tablet={11} mobile={16}>
               <StyledMemberName>
                 {strings.aboutScreen.meetTeam.linda.name}
               </StyledMemberName>
@@ -260,10 +265,7 @@ class About extends Component {
               >
                 <Icon name='facebook f'/>
               </StyledSocialMediaButton>
-            </StyledMemberDetailRightWrapper>
-            <GridColumn width={5}>
-              <Image src={linda} rounded/>
-            </GridColumn>
+            </StyledMemberDetailLeftWrapper>
           </StyledMemberWrapper>
         </StyledTeamWrapper>
       </StyledSectionWrapper>
