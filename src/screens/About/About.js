@@ -15,6 +15,7 @@ import {
   StyledMemberDetailLeftWrapper,
   StyledMemberDetailRightWrapper,
   StyledMemberImage,
+  StyledMemberImageWrapper,
   StyledMemberInfo,
   StyledMemberName,
   StyledMemberTitle,
@@ -64,9 +65,9 @@ class About extends Component {
         </StyledTitleText>
         <StyledTeamWrapper>
           <StyledMemberWrapper columns={2}>
-            <GridColumn computer={5} tablet={5} mobile={16}>
+            <StyledMemberImageWrapper computer={5} tablet={5} mobile={16}>
               <StyledMemberImage src='https://devlinda.com/assets/img/profile.png' rounded/>
-            </GridColumn>
+            </StyledMemberImageWrapper>
             <StyledMemberDetailRightWrapper computer={11} tablet={11} mobile={16}>
               <StyledMemberName>
                 {strings.aboutScreen.meetTeam.david.name}
@@ -123,9 +124,9 @@ class About extends Component {
 
         <StyledTeamWrapper>
           <StyledMemberWrapper columns={2} reversed="computer tablet">
-            <GridColumn computer={5} tablet={5} mobile={16}>
+            <StyledMemberImageWrapper computer={5} tablet={5} mobile={16}>
               <StyledMemberImage src={linda} rounded/>
-            </GridColumn>
+            </StyledMemberImageWrapper>
             <StyledMemberDetailLeftWrapper computer={11} tablet={11} mobile={16}>
               <StyledMemberName>
                 {strings.aboutScreen.meetTeam.linda.name}

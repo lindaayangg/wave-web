@@ -72,6 +72,14 @@ export const StyledMemberWrapper = styled(Grid)`
   }
 `;
 
+export const StyledMemberImageWrapper = styled(GridColumn)`
+   &&& {
+    @media (max-width: 767px) {
+      text-align: -webkit-center;
+    }
+  } 
+`;
+
 export const StyledMemberImage = styled(Image)`
   &&& {
     @media (max-width: 767px) {
@@ -110,6 +118,7 @@ export const StyledMemberDetailRightWrapper = styled(GridColumn)`
     @media (max-width: 767px) {
       padding-left: 10px !important;
       padding-right: 0 !important;
+      text-align: center;
     }
   }
 `;
@@ -120,6 +129,7 @@ export const StyledMemberDetailLeftWrapper = styled(GridColumn)`
     padding-right: 70px !important;
     @media (max-width: 767px) {
       padding-right: 0 !important;
+      text-align: center;
     }
   }
 `;
