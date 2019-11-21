@@ -1,30 +1,38 @@
 import React, {Component} from 'react';
-import {StyledLeftGrid, StyledRightGrid, StyledSendIcon, StyledTabWrapper, StyledTitleText} from "./styles";
+import {
+  StyledLeftGrid,
+  StyledRightGrid,
+  StyledSendIcon,
+  StyledSendImage,
+  StyledTabWrapper,
+  StyledTitleText,
+  StyledTitleWrapper
+} from "./styles";
 import strings from "../../res/strings";
 import Tab from "../../components/Tab/Tab";
-import {Grid} from "semantic-ui-react";
 import {StyledComponentWrapper} from "../../res/styles";
+import {Grid} from "semantic-ui-react";
 
 class Send extends Component {
 
-  renderLeftGrid() {
+  renderTitle() {
     return (
-      <StyledTabWrapper>
-        <Tab/>
-      </StyledTabWrapper>
-    )
-  }
-
-  renderRightGrid() {
-    return (
-      <>
+      <StyledTitleWrapper>
         <StyledSendIcon name="send" size="huge"/>
         <StyledTitleText>
           {strings.sendScreen.title}
         </StyledTitleText>
-        {/*<StyledSendImage src='https://webdevinsights.com/wp-content/uploads/2019/08/hosting-800x445.jpg'/>*/}
-        {/*<StyledSendImage src='https://beyondmart.com/web-development-rajkot.png'/>*/}
-        {/*<StyledSendImage src='https://www.seekclipart.com/clipng/middle/311-3119939_send-us-a-note-clipart.png'/>*/}
+      </StyledTitleWrapper>
+    )
+  }
+
+  renderLeftGrid() {
+    return (
+      <>
+        {this.renderTitle()}
+        <StyledTabWrapper>
+          <Tab/>
+        </StyledTabWrapper>
       </>
     )
   }
@@ -32,12 +40,12 @@ class Send extends Component {
   render() {
     return (
       <StyledComponentWrapper>
-        <Grid columns={2} relaxed="very">
-          <StyledLeftGrid width={9} verticalAlign="middle">
+        <Grid columns={2}>
+          <StyledLeftGrid computer={10} tablet={16} mobile={16} verticalAlign="middle">
             {this.renderLeftGrid()}
           </StyledLeftGrid>
-          <StyledRightGrid width={7} verticalAlign="middle">
-            {this.renderRightGrid()}
+          <StyledRightGrid computer={6} tablet={16} mobile={16} verticalAlign='middle'>
+            <StyledSendImage src='https://www.seekclipart.com/clipng/middle/311-3119939_send-us-a-note-clipart.png'/>
           </StyledRightGrid>
         </Grid>
       </StyledComponentWrapper>

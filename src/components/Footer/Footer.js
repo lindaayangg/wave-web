@@ -29,7 +29,8 @@ class Footer extends Component {
     return (
       <StyledFooterWrapper>
         <Grid relaxed='very'>
-          <StyledContainerGridColumn width={4}>
+
+          <StyledContainerGridColumn computer={4} tablet={8} mobile={16}>
             WAVE LOGO
             <Icon name="heart"/>
             <StyledInfoGridRow>
@@ -37,7 +38,8 @@ class Footer extends Component {
               <div>{strings.footer.aboutUsDescription}</div>
             </StyledInfoGridRow>
           </StyledContainerGridColumn>
-          <StyledContainerGridColumn width={4}>
+
+          <StyledContainerGridColumn computer={4} tablet={8} mobile={16}>
             <StyledHeader>{strings.footer.companyTitle}</StyledHeader>
             <StyledListWrapper>
               <StyledListItem as={Link} to='/about'>{strings.footer.aboutUs}</StyledListItem>
@@ -45,7 +47,8 @@ class Footer extends Component {
               <StyledListItem as={Link} to='/placeholder'>Placeholder</StyledListItem>
             </StyledListWrapper>
           </StyledContainerGridColumn>
-          <StyledContainerGridColumn width={4}>
+
+          <StyledContainerGridColumn computer={4} tablet={8} mobile={16}>
             <StyledHeader>{strings.footer.contact}</StyledHeader>
             <StyledListWrapper>
               <StyledListItemContact>
@@ -62,7 +65,8 @@ class Footer extends Component {
               </StyledListItemContact>
             </StyledListWrapper>
           </StyledContainerGridColumn>
-          <StyledContainerGridColumn width={4}>
+
+          <StyledContainerGridColumn computer={4} tablet={8} mobile={16}>
             <StyledHeader>{strings.footer.products}</StyledHeader>
             <StyledAppStoreBadgeWrapper>
               <StyledGooglePlayBadge

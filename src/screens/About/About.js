@@ -11,8 +11,10 @@ import {
   StyledHackathonGrid,
   StyledHackathonTitle,
   StyledHackthonCardWrapper,
+  StyledInspirationDetailWrapper,
   StyledMemberDetailLeftWrapper,
   StyledMemberDetailRightWrapper,
+  StyledMemberImage,
   StyledMemberInfo,
   StyledMemberName,
   StyledMemberTitle,
@@ -53,6 +55,134 @@ class About extends Component {
       </div>
     )
   };
+
+  renderMeetTeam = () => {
+    return (
+      <StyledSectionWrapper>
+        <StyledTitleText>
+          {strings.aboutScreen.meetTeam.title}
+        </StyledTitleText>
+        <StyledTeamWrapper>
+          <StyledMemberWrapper columns={2}>
+            <GridColumn computer={5} tablet={5} mobile={16}>
+              <StyledMemberImage src='https://devlinda.com/assets/img/profile.png' rounded/>
+            </GridColumn>
+            <StyledMemberDetailRightWrapper computer={11} tablet={11} mobile={16}>
+              <StyledMemberName>
+                {strings.aboutScreen.meetTeam.david.name}
+              </StyledMemberName>
+              <StyledMemberTitle>
+                {strings.aboutScreen.meetTeam.david.title}
+              </StyledMemberTitle>
+              <StyledMemberInfo>
+                {strings.aboutScreen.meetTeam.david.detail}
+              </StyledMemberInfo>
+              <StyledSocialMediaButton
+                icon
+                circular
+                href='https://www.linkedin.com/in/davidhqr/'
+                target='_blank'
+              >
+                <Icon name='linkedin'/>
+              </StyledSocialMediaButton>
+              <StyledSocialMediaButton
+                icon
+                circular
+                href='https://github.com/davidhqr'
+                target='_blank'
+              >
+                <Icon name='github alternate'/>
+              </StyledSocialMediaButton>
+              <StyledSocialMediaButton
+                icon
+                circular
+                href='https://devdavid.com/'
+                target='_blank'
+              >
+                <Icon name='linkify'/>
+              </StyledSocialMediaButton>
+              <StyledSocialMediaButton
+                icon
+                circular
+                href='mailto:shiwei.zhang@uwaterloo.ca'
+                target='_blank'
+              >
+                <Icon name='mail'/>
+              </StyledSocialMediaButton>
+              <StyledSocialMediaButton
+                icon
+                circular
+                href='https://www.facebook.com/davidhqr'
+                target='_blank'
+              >
+                <Icon name='facebook f'/>
+              </StyledSocialMediaButton>
+            </StyledMemberDetailRightWrapper>
+          </StyledMemberWrapper>
+        </StyledTeamWrapper>
+
+        <StyledTeamWrapper>
+          <StyledMemberWrapper columns={2} reversed="computer tablet">
+            <GridColumn computer={5} tablet={5} mobile={16}>
+              <StyledMemberImage src={linda} rounded/>
+            </GridColumn>
+            <StyledMemberDetailLeftWrapper computer={11} tablet={11} mobile={16}>
+              <StyledMemberName>
+                {strings.aboutScreen.meetTeam.linda.name}
+              </StyledMemberName>
+              <StyledMemberTitle>
+                {strings.aboutScreen.meetTeam.linda.title}
+              </StyledMemberTitle>
+              <StyledMemberInfo>
+                {strings.aboutScreen.meetTeam.linda.detail}
+              </StyledMemberInfo>
+              <StyledSocialMediaButton
+                icon
+                circular
+                href='https://www.linkedin.com/in/lindaayangg/'
+                target='_blank'
+              >
+                <Icon name='linkedin'/>
+              </StyledSocialMediaButton>
+              <StyledSocialMediaButton
+                icon
+                circular
+                href='https://github.com/lindaayangg'
+                target='_blank'
+              >
+                <Icon name='github alternate'/>
+              </StyledSocialMediaButton>
+              <StyledSocialMediaButton
+                icon
+                circular
+                href='https://devlinda.com/'
+                target='_blank'
+              >
+                <Icon name='linkify'/>
+              </StyledSocialMediaButton>
+              <StyledSocialMediaButton
+                icon
+                circular
+                href='mailto:xiaoling.yang@uwaterloo.ca'
+                target='_blank'
+              >
+                <Icon name='mail'/>
+              </StyledSocialMediaButton>
+              <StyledSocialMediaButton
+                icon
+                circular
+                href='https://www.facebook.com/lindayanggg'
+                target='_blank'
+              >
+                <Icon name='facebook f'/>
+              </StyledSocialMediaButton>
+            </StyledMemberDetailLeftWrapper>
+          </StyledMemberWrapper>
+        </StyledTeamWrapper>
+      </StyledSectionWrapper>
+    )
+  };
+
 
   renderCarousel = () => {
     const carouselSettings = {
@@ -125,12 +255,14 @@ class About extends Component {
         <StyledTitleText>
           {strings.aboutScreen.inspiration.title}
         </StyledTitleText>
-        <StyledCarouselWrapper>
+        <StyledInspirationDetailWrapper>
           <StyledHackathonGrid columns={2}>
-            <GridColumn width={7}>
-              {this.renderCarousel()}
+            <GridColumn computer={7} tablet={16} mobile={16}>
+              <StyledCarouselWrapper>
+                {this.renderCarousel()}
+              </StyledCarouselWrapper>
             </GridColumn>
-            <StyledHackathonDescriptionWrapper width={9}>
+            <StyledHackathonDescriptionWrapper computer={9} tablet={16} mobile={16}>
               <StyledHackathonTitle>
                 {strings.aboutScreen.inspiration.hackathon.title}
               </StyledHackathonTitle>
@@ -139,136 +271,11 @@ class About extends Component {
               </StyledHackathonDescription>
             </StyledHackathonDescriptionWrapper>
           </StyledHackathonGrid>
-        </StyledCarouselWrapper>
+        </StyledInspirationDetailWrapper>
       </StyledSectionWrapper>
     )
   };
 
-  renderMeetTeam = () => {
-    return (
-      <StyledSectionWrapper>
-        <StyledTitleText>
-          {strings.aboutScreen.meetTeam.title}
-        </StyledTitleText>
-        <StyledTeamWrapper>
-          <StyledMemberWrapper columns={2}>
-            <GridColumn width={5}>
-              <Image src='https://devlinda.com/assets/img/profile.png' rounded/>
-            </GridColumn>
-            <StyledMemberDetailLeftWrapper width={11}>
-              <StyledMemberName>
-                {strings.aboutScreen.meetTeam.david.name}
-              </StyledMemberName>
-              <StyledMemberTitle>
-                {strings.aboutScreen.meetTeam.david.title}
-              </StyledMemberTitle>
-              <StyledMemberInfo>
-                {strings.aboutScreen.meetTeam.david.detail}
-              </StyledMemberInfo>
-              <StyledSocialMediaButton
-                icon
-                circular
-                href='https://www.linkedin.com/in/davidhqr/'
-                target='_blank'
-              >
-                <Icon name='linkedin'/>
-              </StyledSocialMediaButton>
-              <StyledSocialMediaButton
-                icon
-                circular
-                href='https://github.com/davidhqr'
-                target='_blank'
-              >
-                <Icon name='github alternate'/>
-              </StyledSocialMediaButton>
-              <StyledSocialMediaButton
-                icon
-                circular
-                href='https://devdavid.com/'
-                target='_blank'
-              >
-                <Icon name='linkify'/>
-              </StyledSocialMediaButton>
-              <StyledSocialMediaButton
-                icon
-                circular
-                href='mailto:shiwei.zhang@uwaterloo.ca'
-                target='_blank'
-              >
-                <Icon name='mail'/>
-              </StyledSocialMediaButton>
-              <StyledSocialMediaButton
-                icon
-                circular
-                href='https://www.facebook.com/davidhqr'
-                target='_blank'
-              >
-                <Icon name='facebook f'/>
-              </StyledSocialMediaButton>
-            </StyledMemberDetailLeftWrapper>
-          </StyledMemberWrapper>
-        </StyledTeamWrapper>
-        <StyledTeamWrapper>
-          <StyledMemberWrapper columns={2}>
-            <StyledMemberDetailRightWrapper width={11}>
-              <StyledMemberName>
-                {strings.aboutScreen.meetTeam.linda.name}
-              </StyledMemberName>
-              <StyledMemberTitle>
-                {strings.aboutScreen.meetTeam.linda.title}
-              </StyledMemberTitle>
-              <StyledMemberInfo>
-                {strings.aboutScreen.meetTeam.linda.detail}
-              </StyledMemberInfo>
-              <StyledSocialMediaButton
-                icon
-                circular
-                href='https://www.linkedin.com/in/lindaayangg/'
-                target='_blank'
-              >
-                <Icon name='linkedin'/>
-              </StyledSocialMediaButton>
-              <StyledSocialMediaButton
-                icon
-                circular
-                href='https://github.com/lindaayangg'
-                target='_blank'
-              >
-                <Icon name='github alternate'/>
-              </StyledSocialMediaButton>
-              <StyledSocialMediaButton
-                icon
-                circular
-                href='https://devlinda.com/'
-                target='_blank'
-              >
-                <Icon name='linkify'/>
-              </StyledSocialMediaButton>
-              <StyledSocialMediaButton
-                icon
-                circular
-                href='mailto:xiaoling.yang@uwaterloo.ca'
-                target='_blank'
-              >
-                <Icon name='mail'/>
-              </StyledSocialMediaButton>
-              <StyledSocialMediaButton
-                icon
-                circular
-                href='https://www.facebook.com/lindayanggg'
-                target='_blank'
-              >
-                <Icon name='facebook f'/>
-              </StyledSocialMediaButton>
-            </StyledMemberDetailRightWrapper>
-            <GridColumn width={5}>
-              <Image src={linda} rounded/>
-            </GridColumn>
-          </StyledMemberWrapper>
-        </StyledTeamWrapper>
-      </StyledSectionWrapper>
-    )
-  };
 
   render() {
     return (

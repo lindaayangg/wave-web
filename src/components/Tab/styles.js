@@ -12,5 +12,8 @@ export const StyledTabPane = styled(Tab.Pane)`
     height: 400px;
     padding: 20px;
     border-radius: 10px !important;
+    @media (min-width: 2000px) {
+      height: 500px; 
+    }
   }
 `;

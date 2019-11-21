@@ -7,7 +7,7 @@ export const StyledFooterWrapper = styled.div`
   &&& {
     background-color: #141414;
     color: #A8A8A8;
-    padding: 70px;
+    padding: 70px 70px 50px 70px;
   }
 `;
 

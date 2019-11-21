@@ -14,7 +14,7 @@ export const StyledGridRow = styled(GridRow)`
 export const StyledDropzoneDiv = styled.div`
   &&& {
     position: relative;
-    min-height: 220px;
+    min-height: 320px;
     background-color: #FCF3F2;
     border-color: #FA7268;
     border-width: medium;
@@ -23,6 +23,9 @@ export const StyledDropzoneDiv = styled.div`
     cursor: pointer;
     box-sizing: border-box;
     padding: 20px;
+    @media (min-width: 2000px) {
+      min-height: 410px; 
+    }
   }
 `;
 

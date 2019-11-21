@@ -6,11 +6,11 @@ import {
   StyledMessageHeader,
   StyledMessageIcon,
   StyledReceiveButton,
+  StyledReceiveButtonWrapper,
   StyledReceivedImageWrapper,
   StyledReceivedMessage,
   StyledReceivedMessagesDisplay,
-  StyledReceivedMessagesWrapper,
-  StyledReceiveWaveContainer
+  StyledReceivedMessagesWrapper
 } from "./styles";
 import strings from "../../res/strings";
 import {Chirp, toAscii} from 'chirpsdk';
@@ -25,7 +25,7 @@ import {ScaleLoader} from 'react-spinners';
 class ReceiveWave extends Component {
   state = {
     startListening: false,
-    receiveStatus: strings.receiveScreen.receiveStatus.listening,
+    receiveStatus: strings.receiveScreen.receiveStatus.start,
     receivedMessage: null,
     receivedFiles: [],
   };
@@ -47,6 +47,9 @@ class ReceiveWave extends Component {
   };
 
   async handleStartListeningOnClick() {
+    this.setState({
+      receiveStatus: strings.receiveScreen.receiveStatus.listening
+    });
     this.sdk = await Chirp({
       key: '62B7Ab44b74C3E671a9cddd2a',
       onReceiving: () => {
@@ -128,7 +131,7 @@ class ReceiveWave extends Component {
   handleStopClick = () => {
     this.setState({
       startListening: false,
-      receiveStatus: strings.receiveScreen.receiveStatus.listening,
+      receiveStatus: strings.receiveScreen.receiveStatus.start,
       receivedMessage: null,
       receivedFiles: [],
     });
@@ -137,12 +140,14 @@ class ReceiveWave extends Component {
 
   renderReceiveButton = () => {
     return (
-      <StyledReceiveButton
-        circular
-        onClick={() => this.handleStartListeningOnClick()}
-      >
-        {strings.receiveScreen.clickListen}
-      </StyledReceiveButton>
+      <StyledReceiveButtonWrapper>
+        <StyledReceiveButton
+          circular
+          onClick={() => this.handleStartListeningOnClick()}
+        >
+          {strings.receiveScreen.clickListen}
+        </StyledReceiveButton>
+      </StyledReceiveButtonWrapper>
     )
   };
 
@@ -208,16 +213,14 @@ class ReceiveWave extends Component {
   render() {
     const {startListening} = this.state;
     return (
-      <StyledReceiveWaveContainer>
+      <div>
         {startListening
-          ? <div>
-            {this.renderListenForWave()}
-            {this.renderReceivedMessage()}
-          </div>
+          ? this.renderListenForWave()
           : this.renderReceiveButton()
         }
+        {this.renderReceivedMessage()}
         <StyledSemanticToastContainer/>
-      </StyledReceiveWaveContainer>
+      </div>
     )
   }
 }
