@@ -59,9 +59,13 @@ export const StyledTitleText = styled(Header)`
 
 export const StyledReceiveWaveWrapper = styled.div`
   &&& { 
-    width: 50vw;
+    width: 100%;
     margin-top: 50px;
-    @media (max-width: 991px) {
+    @media (min-width: 768px) and (max-width: 991px) {
+      width: 70%;
+      margin-top: 30px
+    }
+    @media (max-width: 767px) {
       width: 90%;
       margin-top: 30px
     }
