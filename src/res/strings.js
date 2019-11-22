@@ -124,6 +124,27 @@ const strings = {
     email: 'waveinc@gmail.com',
     copyRight: '© Wave Inc. 2019',
   },
+  faq: {
+    title: 'Frequently Asked Questions',
+    question1: 'How Do I Listen For A Wave?',
+    answer1: 'placeholder',
+    question2: 'How Do I Send A Wave?',
+    answer2: 'placeholder',
+    question3: 'Why Is Wave Not Working?',
+    answer3: 'placeholder',
+    question4: 'Why Should I Use Wave Over AirDrop/Bluetooth And Other File Transferring Tools?',
+    answer4: 'placeholder',
+    question5: 'Do I Need An Internet Connection to Use Wave?',
+    answer5: 'placeholder',
+    question6: 'Why Is There A Maximum Length to The Text I Can Send For Offline Mode?',
+    answer6: 'placeholder',
+    question7: 'Does the Person Receiving My Wave Need to Have the App Installed?',
+    answer7: 'placeholder',
+    question8: 'How Secure is Wave?',
+    answer8: 'placeholder',
+    question9: 'How Many Devices Can I Send to at Once?',
+    answer9: 'placeholder'
+  }
 };
 
 export default strings;

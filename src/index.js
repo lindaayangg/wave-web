@@ -10,6 +10,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Navbar from "./components/Navbar/Navbar";
 import About from "./screens/About/About";
 import Footer from "./components/Footer/Footer";
+import FAQ from "./screens/FAQ/FAQ";
 
 const routing = (
   <Router>
@@ -19,6 +20,7 @@ const routing = (
       <Route exact path="/send" component={Send}/>
       <Route exact path="/receive" component={Receive}/>
       <Route exact path="/about" component={About}/>
+      <Route exact path="/faq" component={FAQ}/>
       <Route component={Error}/>
     </Switch>
     <Footer/>
