@@ -36,6 +36,7 @@ import hackthe6ix_stage3 from '../../res/images/hackthe6ix_stage3.jpg';
 import hackthe6ix_stage1 from '../../res/images/hackthe6ix_stage1.jpg';
 import hackthe6ix_stage2 from '../../res/images/hackthe6ix_stage2.jpg';
 import linda from '../../res/images/linda.jpg';
+import david from '../../res/images/david.jpg'
 
 class About extends Component {
 
@@ -66,7 +67,7 @@ class About extends Component {
         <StyledTeamWrapper>
           <StyledMemberWrapper columns={2}>
             <StyledMemberImageWrapper computer={5} tablet={5} mobile={16}>
-              <StyledMemberImage src='https://devlinda.com/assets/img/profile.png' rounded/>
+              <StyledMemberImage src={david} rounded/>
             </StyledMemberImageWrapper>
             <StyledMemberDetailRightWrapper computer={11} tablet={11} mobile={16}>
               <StyledMemberName>

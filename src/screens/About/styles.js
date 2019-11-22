@@ -83,7 +83,7 @@ export const StyledMemberImageWrapper = styled(GridColumn)`
 export const StyledMemberImage = styled(Image)`
   &&& {
     @media (max-width: 767px) {
-      width: 50%;
+      width: 70%;
     }
   }
 `;

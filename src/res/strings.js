@@ -24,26 +24,26 @@ const strings = {
   },
   aboutScreen: {
     aboutUsTitle: 'About Us',
-    subtitle: 'We are Wave, and we help you transfer data between platforms hassleless.',
+    subtitle: 'We are Wave, and we help you transfer data between platforms without hassle.',
     aboutText: 'Wave revolves around everyone\'s daily inconvenience of URL links and transfer of files and images. Transferring files typically involves steps such as e-mailing, uploading to the cloud and sharing a link, or syncing up with bluetooth. It only makes sense that there exists a solution that streamlines this process for ALL devices.',
     meetTeam: {
       title: 'Meet the Team',
       linda: {
         name: 'Linda Yang',
         title: 'Co-Founder',
-        detail: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+        detail: 'Linda is the frontend developer and designer for Wave. She designed Wave\'s theme and brand, and developed the React based web app. Linda is a third year Computational Mathematics student at the University of Waterloo.'
       },
       david: {
         name: 'David Zhang',
         title: 'Co-Founder',
-        detail: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        detail: 'David is the backend and mobile developer for Wave. He created the backend API as well as the Flutter (Android & iOS) App. David is a third year Computer Science and Business Administration Double Degree student at the University of Waterloo and Wilfred Laurier University.',
       },
     },
     inspiration: {
       title: 'Inspiration',
       hackathon: {
         title: 'It All Began As A Hackathon Idea',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        description: 'We initially created Wave as an Android App for our HackThe6ix project. Upon winning top 10 finalist at the hackathon, we decided to continue pursuing development of the app and expanded it to more platforms. Wave is now available on Android, iOS, and within the browser.',
         pictureDescription1: 'Demo at HackThe6ix',
         pictureDescription2: 'Top 10 Finalist at HackThe6ix',
       }
@@ -106,7 +106,7 @@ const strings = {
     },
     receive: {
       text: {
-        errorCodeTitle: 'Wave NetWork Error',
+        errorCodeTitle: 'Wave Network Error',
         errorCodeDescription: 'No wave was found. Please try again.',
         receiveErrorTitle: 'Receive Error',
         receiveErrorDescription: 'Decode failed. Please try again.'
@@ -115,7 +115,7 @@ const strings = {
   },
   footer: {
     aboutUs: 'About Us',
-    aboutUsDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    aboutUsDescription: 'Wave is a convenient, device-agnostic means of sending data over sound.',
     companyTitle: 'Company',
     products: 'Products',
     contact: 'Contact Us',
