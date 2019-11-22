@@ -31,12 +31,12 @@ const strings = {
       linda: {
         name: 'Linda Yang',
         title: 'Co-Founder',
-        detail: 'I am a fluffball. Fluffball is me.'
+        detail: 'Linda is the frontend developer and designer for Wave. She designed Wave\'s theme and brand, and developed the React based web app. Linda is a third year Computational Mathematics student at the University of Waterloo.'
       },
       david: {
         name: 'David Zhang',
         title: 'Co-Founder',
-        detail: 'David is the backend and mobile developer for Wave. He created the backend API as well as the Flutter (Android & iOS) App.',
+        detail: 'David is the backend and mobile developer for Wave. He created the backend API as well as the Flutter (Android & iOS) App. David is a third year Computer Science and Business Administration Double Degree student at the University of Waterloo and Wilfred Laurier University.',
       },
     },
     inspiration: {
@@ -115,7 +115,7 @@ const strings = {
   },
   footer: {
     aboutUs: 'About Us',
-    aboutUsDescription: 'Wave started as a HackThe6ix project. It has now grown to a convenient, device-agnostic means of sending data over sound.',
+    aboutUsDescription: 'Wave is a convenient, device-agnostic means of sending data over sound.',
     companyTitle: 'Company',
     products: 'Products',
     contact: 'Contact Us',
