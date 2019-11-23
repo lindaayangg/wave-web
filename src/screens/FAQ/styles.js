@@ -25,13 +25,6 @@ export const StyledQuestionSectionWrapper = styled.div`
   }
 `;
 
-export const StyledAnswerWrapper = styled.span`
-  &&& { 
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-  }
-`;
-
 export const StyledFAQImage = styled(Image)`
   &&& {
     margin-top: 70px;

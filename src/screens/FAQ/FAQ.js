@@ -33,7 +33,7 @@ class FAQ extends Component {
         },
         content: {
           content: (
-            <StyledAnswerWrapper>{strings.faq.answer1}</StyledAnswerWrapper>
+            <span>{strings.faq.answer1}</span>
           ),
         },
       },
@@ -45,7 +45,7 @@ class FAQ extends Component {
         },
         content: {
           content: (
-            <StyledAnswerWrapper>{strings.faq.answer2}</StyledAnswerWrapper>
+            <span>{strings.faq.answer2}</span>
           ),
         },
       },
@@ -57,7 +57,7 @@ class FAQ extends Component {
         },
         content: {
           content: (
-            <StyledAnswerWrapper>{strings.faq.answer3}</StyledAnswerWrapper>
+            <span>{strings.faq.answer3}</span>
           ),
         },
       },
@@ -69,7 +69,7 @@ class FAQ extends Component {
         },
         content: {
           content: (
-            <StyledAnswerWrapper>{strings.faq.answer4}</StyledAnswerWrapper>
+            <span>{strings.faq.answer4}</span>
           ),
         },
       },
@@ -81,7 +81,7 @@ class FAQ extends Component {
         },
         content: {
           content: (
-            <StyledAnswerWrapper>{strings.faq.answer5}</StyledAnswerWrapper>
+            <span>{strings.faq.answer5}</span>
           ),
         },
       },
@@ -93,7 +93,7 @@ class FAQ extends Component {
         },
         content: {
           content: (
-            <StyledAnswerWrapper>{strings.faq.answer6}</StyledAnswerWrapper>
+            <span>{strings.faq.answer6}</span>
           ),
         },
       },
@@ -105,7 +105,7 @@ class FAQ extends Component {
         },
         content: {
           content: (
-            <StyledAnswerWrapper>{strings.faq.answer7}</StyledAnswerWrapper>
+            <span>{strings.faq.answer7}</span>
           ),
         },
       },
@@ -117,7 +117,7 @@ class FAQ extends Component {
         },
         content: {
           content: (
-            <StyledAnswerWrapper>{strings.faq.answer8}</StyledAnswerWrapper>
+            <span>{strings.faq.answer8}</span>
           ),
         },
       },
@@ -129,7 +129,7 @@ class FAQ extends Component {
         },
         content: {
           content: (
-            <StyledAnswerWrapper>{strings.faq.answer9}</StyledAnswerWrapper>
+            <span>{strings.faq.answer9}</span>
           ),
         },
       },

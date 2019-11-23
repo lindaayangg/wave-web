@@ -127,23 +127,23 @@ const strings = {
   faq: {
     title: 'Frequently Asked Questions',
     question1: 'How Do I Listen For A Wave?',
-    answer1: 'placeholder',
+    answer1: 'To receive a wave within the browser, navigate to the receive screen. You must activate the browser to listen for a wave by clicking \'Press Me to Listen for A Wave\' before the other user clicks send. The text in the container box will change according to the current status. If your wave has successfully arrived, it will be displayed in the container.',
     question2: 'How Do I Send A Wave?',
-    answer2: 'placeholder',
+    answer2: 'To send a wave within the browser, navigate to the send screen. Enter a message or upload an file/image , click send once you are done. If your message or file/image is successfully sent, you will hear the sound of bird chirping.',
     question3: 'Why Is Wave Not Working?',
     answer3: 'placeholder',
-    question4: 'Why Should I Use Wave Over AirDrop/Bluetooth And Other File Transferring Tools?',
+    question4: 'Why Should I Use Wave Over AirDrop/Bluetooth Or Other File Transferring Tools?',
     answer4: 'placeholder',
     question5: 'Do I Need An Internet Connection to Use Wave?',
-    answer5: 'placeholder',
+    answer5: 'No, Wave supports offline mode. There are however limitations to offline mode.',
     question6: 'Why Is There A Maximum Length to The Text I Can Send For Offline Mode?',
     answer6: 'placeholder',
     question7: 'Does the Person Receiving My Wave Need to Have the App Installed?',
-    answer7: 'placeholder',
+    answer7: 'They must have the app installed if they are receiving your wave on mobile devices.',
     question8: 'How Secure is Wave?',
     answer8: 'placeholder',
     question9: 'How Many Devices Can I Send to at Once?',
-    answer9: 'placeholder'
+    answer9: 'You can send to as many devices as you would like at once, as long as the devices receiving are on the receive screen.'
   }
 };
 
