@@ -1,6 +1,6 @@
 import React from 'react';
 import strings from "../../res/strings";
-import {StyledDiv, StyledMenu, StyledMenuItem} from "./styles";
+import {StyledDiv, StyledMenu, StyledMenuItem, StyledMenuItemsWrapper} from "./styles";
 import {NavLink} from "react-router-dom";
 
 class Navbar extends React.Component {
@@ -42,24 +42,26 @@ class Navbar extends React.Component {
           >
             HOME
           </StyledMenuItem>
-          <StyledMenuItem
-            as={NavLink}
-            to="/send"
-          >
-            {strings.navBar.send}
-          </StyledMenuItem>
-          <StyledMenuItem
-            as={NavLink}
-            to="/receive"
-          >
-            {strings.navBar.receive}
-          </StyledMenuItem>
-          <StyledMenuItem
-            as={NavLink}
-            to="/about"
-          >
-            {strings.navBar.about}
-          </StyledMenuItem>
+          <StyledMenuItemsWrapper>
+            <StyledMenuItem
+              as={NavLink}
+              to="/send"
+            >
+              {strings.navBar.send}
+            </StyledMenuItem>
+            <StyledMenuItem
+              as={NavLink}
+              to="/receive"
+            >
+              {strings.navBar.receive}
+            </StyledMenuItem>
+            <StyledMenuItem
+              as={NavLink}
+              to="/about"
+            >
+              {strings.navBar.about}
+            </StyledMenuItem>
+          </StyledMenuItemsWrapper>
         </StyledMenu>
       </StyledDiv>
     )

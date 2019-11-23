@@ -10,7 +10,7 @@ export const StyledDiv = styled.div`
 export const StyledMenu = styled(Menu)`
   &&& {
     height: 72px;
-    padding: 10px 25px 10px 10px !important;
+    padding: 10px 70px 10px 70px !important;
     background-color: #FFFFFF !important;
     display: flex;
     justify-content: flex-end;
@@ -21,7 +21,7 @@ export const StyledMenu = styled(Menu)`
 export const StyledMenuItem = styled(Menu.Item)`
   &&& {
     font-size: 17px !important;
-    margin: 15px !important;
+    padding: 15px 30px;
     font-weight: 900 !important;
     color: #000 !important;
     &:hover {
@@ -30,6 +30,13 @@ export const StyledMenuItem = styled(Menu.Item)`
     &:active {
       color: #FA7268 !important;
     }
+  }
+`;
+
+export const StyledMenuItemsWrapper = styled.div`
+  &&& {
+    margin-left: auto!important;
+    padding: 15px;
   }
 `;
 
