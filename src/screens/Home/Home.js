@@ -16,6 +16,11 @@ import google_play from '../../res/images/google_play_badge.png';
 import wave_landing from '../../res/images/wave_landing.png';
 
 class Home extends Component {
+
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     return (
       <StyledComponentWrapper>

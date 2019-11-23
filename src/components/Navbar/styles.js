@@ -10,7 +10,7 @@ export const StyledDiv = styled.div`
 export const StyledMenu = styled(Menu)`
   &&& {
     height: 72px;
-    padding-right: 25px !important;
+    padding: 10px 25px 10px 10px !important;
     background-color: #FFFFFF !important;
     display: flex;
     justify-content: flex-end;
@@ -20,7 +20,7 @@ export const StyledMenu = styled(Menu)`
 
 export const StyledMenuItem = styled(Menu.Item)`
   &&& {
-    font-size: 15px !important;
+    font-size: 17px !important;
     margin: 15px !important;
     font-weight: 900 !important;
     color: #000 !important;

@@ -15,6 +15,10 @@ import wave_receive from '../../res/images/wave_receive.png';
 
 class Receive extends Component {
 
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   renderTitle() {
     return (
       <StyledTitleWrapper>
