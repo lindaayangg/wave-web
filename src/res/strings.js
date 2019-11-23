@@ -115,6 +115,7 @@ const strings = {
   },
   footer: {
     aboutUs: 'About Us',
+    faq: 'FAQ',
     aboutUsDescription: 'Wave is a convenient, device-agnostic means of sending data over sound.',
     companyTitle: 'Company',
     products: 'Products',

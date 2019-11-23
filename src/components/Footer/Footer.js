@@ -32,7 +32,6 @@ class Footer extends Component {
 
           <StyledContainerGridColumn computer={4} tablet={8} mobile={16}>
             WAVE LOGO
-            <Icon name="heart"/>
             <StyledInfoGridRow>
               <StyledHeader>{strings.footer.aboutUs}</StyledHeader>
               <div>{strings.footer.aboutUsDescription}</div>
@@ -43,8 +42,7 @@ class Footer extends Component {
             <StyledHeader>{strings.footer.companyTitle}</StyledHeader>
             <StyledListWrapper>
               <StyledListItem as={Link} to='/about'>{strings.footer.aboutUs}</StyledListItem>
-              <StyledListItem as={Link} to='/faq'>FAQ</StyledListItem>
-              <StyledListItem as={Link} to='/placeholder'>Placeholder</StyledListItem>
+              <StyledListItem as={Link} to='/faq'>{strings.footer.faq}</StyledListItem>
             </StyledListWrapper>
           </StyledContainerGridColumn>
 
