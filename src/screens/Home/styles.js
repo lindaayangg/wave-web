@@ -40,14 +40,16 @@ export const StyledSubTitleText = styled(HeaderSubHeader)`
   }
 `;
 
-export const StyledLandingImage = styled(Image)`
-  &&& {
-    height: 100% !important;
-  }
-`;
-
 export const StyledAppStoreBadgeWrapper = styled.div`
   &&& {
     margin: 10px 0 0 -10px;
+  }
+`;
+
+export const StyledGooglePlayBadge = styled(Image)`
+  &&& {
+    @media (min-width: 992px) and (max-width: 1000px) {
+      margin-left: -10px;
+    }
   }
 `;

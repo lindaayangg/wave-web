@@ -11,6 +11,7 @@ import {
 import {Grid} from "semantic-ui-react";
 import strings from "../../res/strings";
 import ReceiveWave from "../../components/ReceiveWave/ReceiveWave";
+import wave_receive from '../../res/images/wave_receive.png';
 
 class Receive extends Component {
 
@@ -44,7 +45,7 @@ class Receive extends Component {
             {this.renderLeftGrid()}
           </StyledLeftGrid>
           <StyledRightGrid  computer={6} tablet={16} mobile={16} verticalAlign="middle">
-            <StyledReceiveImage src='https://www.seekclipart.com/clipng/middle/311-3119939_send-us-a-note-clipart.png'/>
+            <StyledReceiveImage src={wave_receive}/>
           </StyledRightGrid>
         </Grid>
       </StyledComponentWrapper>

@@ -33,6 +33,12 @@ export const StyledLeftGridWrapper = styled(GridColumn)`
   }
 `;
 
+export const StyledRightGridWrapper = styled(GridColumn)`
+  &&& {
+    padding-right: 60px !important;
+  }
+`;
+
 export const StyledButton = styled(Button)`
   &&& {
     color: #FFFFFF;
@@ -59,7 +65,6 @@ export const StyledButtonWrapper = styled.div`
 
 export const StyledErrorImage = styled(Image)`
   &&& {
-    margin-top: 70px;
     @media (max-width: 991px) {
       width: 400px;
       margin-top: 0px;

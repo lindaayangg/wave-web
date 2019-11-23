@@ -12,6 +12,7 @@ import strings from "../../res/strings";
 import Tab from "../../components/Tab/Tab";
 import {StyledComponentWrapper} from "../../res/styles";
 import {Grid} from "semantic-ui-react";
+import wave_send from '../../res/images/wave_send.png';
 
 class Send extends Component {
 
@@ -45,7 +46,7 @@ class Send extends Component {
             {this.renderLeftGrid()}
           </StyledLeftGrid>
           <StyledRightGrid computer={6} tablet={16} mobile={16} verticalAlign='middle'>
-            <StyledSendImage src='https://www.seekclipart.com/clipng/middle/311-3119939_send-us-a-note-clipart.png'/>
+            <StyledSendImage src={wave_send}/>
           </StyledRightGrid>
         </Grid>
       </StyledComponentWrapper>

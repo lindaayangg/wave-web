@@ -3,6 +3,7 @@ import {StyledComponentWrapper} from "../../res/styles";
 import {StyledFAQImage, StyledFAQWrapper, StyledQuestionSectionWrapper, StyledTitleText} from "./styles";
 import strings from "../../res/strings";
 import {Accordion, Grid, GridColumn} from "semantic-ui-react";
+import wave_faq from '../../res/images/wave_faq.png';
 
 class FAQ extends Component {
   state = {
@@ -149,7 +150,7 @@ class FAQ extends Component {
               {this.renderQuestions()}
             </GridColumn>
             <GridColumn computer={6} tablet={16} mobile={16}>
-              <StyledFAQImage src='https://www.seekclipart.com/clipng/middle/311-3119939_send-us-a-note-clipart.png'/>
+              <StyledFAQImage src={wave_faq}/>
             </GridColumn>
           </Grid>
         </StyledFAQWrapper>

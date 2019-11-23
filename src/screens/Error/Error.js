@@ -7,10 +7,11 @@ import {
   StyledErrorImage,
   StyledErrorSubheader,
   StyledErrorWrapper,
-  StyledLeftGridWrapper
+  StyledLeftGridWrapper, StyledRightGridWrapper
 } from "./styles";
 import {Grid, GridColumn} from "semantic-ui-react";
 import strings from "../../res/strings";
+import wave_404 from '../../res/images/wave_404.png';
 
 class Error extends Component {
 
@@ -35,7 +36,7 @@ class Error extends Component {
     return (
       <StyledComponentWrapper>
         <StyledErrorWrapper>
-          <Grid columns={2} relaxed='very'>
+          <Grid columns={2}>
             <StyledLeftGridWrapper computer={10} tablet={16} mobile={16} verticalAlign='middle'>
               <StyledErrorHeader>
                 {strings.error.errorMessage}
@@ -45,9 +46,9 @@ class Error extends Component {
               </StyledErrorSubheader>
               {this.renderButtons()}
             </StyledLeftGridWrapper>
-            <GridColumn computer={6} tablet={16} mobile={16}>
-              <StyledErrorImage src='https://www.seekclipart.com/clipng/middle/311-3119939_send-us-a-note-clipart.png'/>
-            </GridColumn>
+            <StyledRightGridWrapper computer={6} tablet={16} mobile={16} verticalAlign='middle'>
+              <StyledErrorImage src={wave_404}/>
+            </StyledRightGridWrapper>
           </Grid>
         </StyledErrorWrapper>
       </StyledComponentWrapper>
