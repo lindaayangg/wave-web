@@ -1,7 +1,9 @@
 import React from 'react';
 import strings from "../../res/strings";
-import {StyledDiv, StyledMenu, StyledMenuItem, StyledMenuItemsWrapper} from "./styles";
+import {StyledDiv, StyledLogoWrapper, StyledMenu, StyledMenuItem, StyledMenuItemsWrapper} from "./styles";
 import {NavLink} from "react-router-dom";
+import {Image} from "semantic-ui-react";
+import wave_icon from '../../res/images/wave.png'
 
 class Navbar extends React.Component {
   state = {
@@ -36,12 +38,13 @@ class Navbar extends React.Component {
           scrolltop={scrollTop}
           text
           fixed="top">
-          <StyledMenuItem
-            as={NavLink}
-            to='/'
-          >
-            HOME
-          </StyledMenuItem>
+          <StyledLogoWrapper>
+            <Image
+              as={NavLink}
+              to='/'
+              src={wave_icon}
+              size='tiny'/>
+          </StyledLogoWrapper>
           <StyledMenuItemsWrapper>
             <StyledMenuItem
               as={NavLink}

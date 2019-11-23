@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Menu} from "semantic-ui-react";
+import {Image, Menu} from "semantic-ui-react";
 
 export const StyledDiv = styled.div`
   &&& {
@@ -37,6 +37,12 @@ export const StyledMenuItemsWrapper = styled.div`
   &&& {
     margin-left: auto!important;
     padding: 15px;
+  }
+`;
+
+export const StyledLogoWrapper = styled.div`
+  &&& {
+    padding: 10px 15px;
   }
 `;
 

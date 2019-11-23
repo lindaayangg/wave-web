@@ -19,7 +19,7 @@ export const StyledContainerGridColumn = styled(GridColumn)`
 
 export const StyledInfoGridRow = styled(GridColumn)`
   &&& {
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 10px;
   }
 `;
