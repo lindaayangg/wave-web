@@ -8,7 +8,7 @@ export const StyledErrorWrapper = styled.div`
     text-align: left;
     width: 100%;
     @media (max-width: 767px) {
-      padding: 60px 50px !important;
+      padding: 60px 50px 30px 50px !important;
     }
   }
 `;
@@ -61,7 +61,9 @@ export const StyledErrorImage = styled(Image)`
   &&& {
     margin-top: 70px;
     @media (max-width: 991px) {
-      width: 500px;
+      width: 400px;
+      margin-top: 0px;
+      padding: 0px 20px 0px 20px !important;
     }
   }
 `;

@@ -36,7 +36,7 @@ class Error extends Component {
       <StyledComponentWrapper>
         <StyledErrorWrapper>
           <Grid columns={2} relaxed='very'>
-            <StyledLeftGridWrapper computer={10} verticalAlign='middle'>
+            <StyledLeftGridWrapper computer={10} tablet={16} mobile={16} verticalAlign='middle'>
               <StyledErrorHeader>
                 {strings.error.errorMessage}
               </StyledErrorHeader>
@@ -45,7 +45,7 @@ class Error extends Component {
               </StyledErrorSubheader>
               {this.renderButtons()}
             </StyledLeftGridWrapper>
-            <GridColumn computer={6}>
+            <GridColumn computer={6} tablet={16} mobile={16}>
               <StyledErrorImage src='https://www.seekclipart.com/clipng/middle/311-3119939_send-us-a-note-clipart.png'/>
             </GridColumn>
           </Grid>
