@@ -122,7 +122,7 @@ const strings = {
     contact: 'Contact Us',
     companyName: 'Wave Inc.',
     location: 'Waterloo, Ontario',
-    email: 'waveinc@gmail.com',
+    email: 'lindahqr@gmail.com',
     copyRight: '© Wave Inc. 2019',
   },
   faq: {

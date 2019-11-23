@@ -3,7 +3,7 @@ import {GridColumn, Header, Icon, Image} from "semantic-ui-react";
 
 export const StyledLeftGrid = styled(GridColumn)`
   &&& {
-    padding: 50px 100px !important;
+    padding: 70px 100px !important;
     @media (max-width: 991px) {
       padding: 50px 50px 10px 50px !important; 
       display: flex !important;
