@@ -40,6 +40,10 @@ import david from '../../res/images/david.jpg'
 
 class About extends Component {
 
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   renderAboutUs = () => {
     return (
       <div>

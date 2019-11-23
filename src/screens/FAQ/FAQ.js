@@ -15,6 +15,10 @@ class FAQ extends Component {
     activeIndex: null
   };
 
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   renderTitle = () => {
     return (
       <StyledTitleText>
