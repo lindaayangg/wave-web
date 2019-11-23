@@ -1,12 +1,6 @@
 import React, {Component} from 'react';
 import {StyledComponentWrapper} from "../../res/styles";
-import {
-  StyledAnswerWrapper,
-  StyledFAQImage,
-  StyledFAQWrapper,
-  StyledQuestionSectionWrapper,
-  StyledTitleText
-} from "./styles";
+import {StyledFAQImage, StyledFAQWrapper, StyledQuestionSectionWrapper, StyledTitleText} from "./styles";
 import strings from "../../res/strings";
 import {Accordion, Grid, GridColumn} from "semantic-ui-react";
 

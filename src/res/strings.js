@@ -145,6 +145,12 @@ const strings = {
     answer8: 'Since anyone can pickup the sound waves that your Wave emits, Wave is not a secure method of sending data. We will add password protected Waves in the future for sending secure data.',
     question9: 'How Many Devices Can I Send to at Once?',
     answer9: 'You can send to as many devices as you would like at once, as long as the devices receiving are on the receive screen.'
+  },
+  error:{
+    errorMessage: 'Something is wrong here...',
+    errorDescription: 'We can\'t find the page you are looking for. Contact us or head back to home.',
+    homeButton: 'Home',
+    contactUsButton: 'Contact Us',
   }
 };
 
