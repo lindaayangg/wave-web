@@ -27,12 +27,6 @@ export const StyledErrorSubheader = styled(HeaderSubHeader)`
   }
 `;
 
-export const StyledLeftGridWrapper = styled(GridColumn)`
-  &&& {
-    padding: 60px !important;
-  }
-`;
-
 export const StyledRightGridWrapper = styled(GridColumn)`
   &&& {
     padding-right: 60px !important;
@@ -67,8 +61,7 @@ export const StyledErrorImage = styled(Image)`
   &&& {
     @media (max-width: 991px) {
       width: 400px;
-      margin-top: 0px;
-      padding: 0px 20px 0px 20px !important;
+      margin-top: 20px;
     }
   }
 `;

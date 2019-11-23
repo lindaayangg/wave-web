@@ -15,6 +15,9 @@ export const StyledMenu = styled(Menu)`
     display: flex;
     justify-content: flex-end;
     border-bottom: ${props => props.scrolltop ? 'none' : '1px solid rgba(34,36,38,.15) !important'}
+    @media (max-width: 767px) {
+      padding: 10px 0px !important;
+    }
   }
 `;
 
@@ -29,6 +32,9 @@ export const StyledMenuItem = styled(Menu.Item)`
     }
     &:active {
       color: #FA7268 !important;
+    }
+    @media (max-width: 767px) {
+      padding: 15px 15px !important;
     }
   }
 `;

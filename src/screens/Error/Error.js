@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {StyledComponentWrapper} from "../../res/styles";
+import {StyledComponentWrapper, StyledFullHeightComponentWrapper} from "../../res/styles";
 import {
   StyledButton,
   StyledButtonWrapper,
@@ -34,10 +34,10 @@ class Error extends Component {
 
   render() {
     return (
-      <StyledComponentWrapper>
+      <StyledFullHeightComponentWrapper>
         <StyledErrorWrapper>
           <Grid columns={2}>
-            <StyledLeftGridWrapper computer={10} tablet={16} mobile={16} verticalAlign='middle'>
+            <GridColumn computer={10} tablet={16} mobile={16} verticalAlign='middle'>
               <StyledErrorHeader>
                 {strings.error.errorMessage}
               </StyledErrorHeader>
@@ -45,13 +45,13 @@ class Error extends Component {
                 {strings.error.errorDescription}
               </StyledErrorSubheader>
               {this.renderButtons()}
-            </StyledLeftGridWrapper>
+            </GridColumn>
             <StyledRightGridWrapper computer={6} tablet={16} mobile={16} verticalAlign='middle'>
               <StyledErrorImage src={wave_404}/>
             </StyledRightGridWrapper>
           </Grid>
         </StyledErrorWrapper>
-      </StyledComponentWrapper>
+      </StyledFullHeightComponentWrapper>
     )
   }
 }
