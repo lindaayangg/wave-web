@@ -1,6 +1,6 @@
 import React from 'react';
 import strings from "../../res/strings";
-import {StyledDiv, StyledLogoWrapper, StyledMenu, StyledMenuItem, StyledMenuItemsWrapper} from "./styles";
+import {StyledLogoWrapper, StyledMenu, StyledMenuItem, StyledMenuItemsWrapper, StyledNavbarWrapper} from "./styles";
 import {NavLink} from "react-router-dom";
 import {Image} from "semantic-ui-react";
 import wave_icon from '../../res/images/wave.png'
@@ -33,7 +33,7 @@ class Navbar extends React.Component {
   render() {
     const {scrollTop} = this.state;
     return (
-      <StyledDiv>
+      <StyledNavbarWrapper>
         <StyledMenu
           scrolltop={scrollTop}
           text
@@ -66,7 +66,7 @@ class Navbar extends React.Component {
             </StyledMenuItem>
           </StyledMenuItemsWrapper>
         </StyledMenu>
-      </StyledDiv>
+      </StyledNavbarWrapper>
     )
   }
 }
