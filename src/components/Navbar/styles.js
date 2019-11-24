@@ -30,7 +30,7 @@ export const StyledMenuItem = styled(Menu.Item)`
     &:hover {
       color: #FA7268 !important;
     }
-    &:active {
+    &.active {
       color: #FA7268 !important;
     }
     @media (max-width: 767px) {
