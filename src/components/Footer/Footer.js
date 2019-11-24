@@ -60,7 +60,7 @@ class Footer extends Component {
               </StyledListItemContact>
               <StyledListItemContact>
                 <List.Icon name='mail'/>
-                <StyledEmailContent href='mailto:xiaoling.yang@uwaterloo.ca'>{strings.footer.email}</StyledEmailContent>
+                <StyledEmailContent href='mailto:lindahqr@gmail.com'>{strings.footer.email}</StyledEmailContent>
               </StyledListItemContact>
             </StyledListWrapper>
           </StyledContainerGridColumn>
@@ -85,14 +85,6 @@ class Footer extends Component {
         </Grid>
         <StyledDivider/>
         <StyledSocialMediaContainer>
-          <StyledSocialMediaButton
-            circular
-            icon
-            href='https://www.facebook.com/lindayanggg'
-            target='_blank'
-          >
-            <Icon name="facebook f"/>
-          </StyledSocialMediaButton>
           <StyledSocialMediaButton
             circular
             icon

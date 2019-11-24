@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {StyledComponentWrapper, StyledFullHeightComponentWrapper} from "../../res/styles";
+import {StyledFullHeightComponentWrapper} from "../../res/styles";
 import {
   StyledButton,
   StyledButtonWrapper,
@@ -7,7 +7,7 @@ import {
   StyledErrorImage,
   StyledErrorSubheader,
   StyledErrorWrapper,
-  StyledLeftGridWrapper, StyledRightGridWrapper
+  StyledRightGridWrapper
 } from "./styles";
 import {Grid, GridColumn} from "semantic-ui-react";
 import strings from "../../res/strings";

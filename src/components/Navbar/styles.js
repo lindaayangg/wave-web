@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import {Image, Menu} from "semantic-ui-react";
+import {Menu} from "semantic-ui-react";
 
-export const StyledDiv = styled.div`
+export const StyledNavbarWrapper = styled.div`
   &&& {
     background-color: #FFFFFF;
   }
