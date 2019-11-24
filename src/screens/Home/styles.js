@@ -11,7 +11,7 @@ export const StyledGridWrapper = styled(Grid)`
 
 export const StyledGridLeftColumn = styled(GridColumn)`
   &&& {
-    padding: 50px 80px 20px 80px !important;
+    padding: 50px 100px 20px 100px !important;
     @media (max-width: 767px) {
       padding: 50px 40px 20px 40px !important;
     }

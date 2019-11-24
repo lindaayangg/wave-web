@@ -16,6 +16,10 @@ import wave_send from '../../res/images/wave_send.png';
 
 class Send extends Component {
 
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   renderTitle() {
     return (
       <StyledTitleWrapper>

@@ -42,3 +42,16 @@ export const StyledComponentWrapper = styled.div`
     height: fit-content;
   }
 `;
+
+export const StyledFullHeightComponentWrapper = styled.div`
+  &&& {
+    margin-top: 72px;
+    margin-bottom: 50px !important;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    @media (max-width: 767px) {
+      height: fit-content;
+    }
+  }
+`;

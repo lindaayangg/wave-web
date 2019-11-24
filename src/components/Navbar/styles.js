@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {Menu} from "semantic-ui-react";
 
-export const StyledDiv = styled.div`
+export const StyledNavbarWrapper = styled.div`
   &&& {
     background-color: #FFFFFF;
   }
@@ -10,26 +10,45 @@ export const StyledDiv = styled.div`
 export const StyledMenu = styled(Menu)`
   &&& {
     height: 72px;
-    padding-right: 25px !important;
+    padding: 10px 70px 10px 70px !important;
     background-color: #FFFFFF !important;
     display: flex;
     justify-content: flex-end;
     border-bottom: ${props => props.scrolltop ? 'none' : '1px solid rgba(34,36,38,.15) !important'}
+    @media (max-width: 767px) {
+      padding: 10px 0px !important;
+    }
   }
 `;
 
 export const StyledMenuItem = styled(Menu.Item)`
   &&& {
-    font-size: 15px !important;
-    margin: 15px !important;
+    font-size: 17px !important;
+    padding: 15px 30px;
     font-weight: 900 !important;
     color: #000 !important;
     &:hover {
       color: #FA7268 !important;
     }
-    &:active {
+    &.active {
       color: #FA7268 !important;
     }
+    @media (max-width: 767px) {
+      padding: 15px 15px !important;
+    }
+  }
+`;
+
+export const StyledMenuItemsWrapper = styled.div`
+  &&& {
+    margin-left: auto!important;
+    padding: 15px;
+  }
+`;
+
+export const StyledLogoWrapper = styled.div`
+  &&& {
+    padding: 10px 15px;
   }
 `;
 

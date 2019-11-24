@@ -17,12 +17,13 @@ import {
   StyledSocialMediaContainer
 } from "./styles";
 import Grid from "semantic-ui-react/dist/commonjs/collections/Grid";
-import {Icon} from "semantic-ui-react";
+import {Icon, Image} from "semantic-ui-react";
 import List from "semantic-ui-react/dist/commonjs/elements/List";
 import strings from "../../res/strings";
 import {Link} from "react-router-dom";
 import google_play from '../../res/images/google_play_badge.png';
 import apple_store from '../../res/images/apple_store_badge.svg';
+import wave_icon from '../../res/images/wave_icon.png'
 
 class Footer extends Component {
   render() {
@@ -31,7 +32,7 @@ class Footer extends Component {
         <Grid relaxed='very'>
 
           <StyledContainerGridColumn computer={4} tablet={8} mobile={16}>
-            WAVE LOGO
+            <Image src={wave_icon} size='tiny'/>
             <StyledInfoGridRow>
               <StyledHeader>{strings.footer.aboutUs}</StyledHeader>
               <div>{strings.footer.aboutUsDescription}</div>
@@ -59,7 +60,7 @@ class Footer extends Component {
               </StyledListItemContact>
               <StyledListItemContact>
                 <List.Icon name='mail'/>
-                <StyledEmailContent href='mailto:xiaoling.yang@uwaterloo.ca'>{strings.footer.email}</StyledEmailContent>
+                <StyledEmailContent href='mailto:lindahqr@gmail.com'>{strings.footer.email}</StyledEmailContent>
               </StyledListItemContact>
             </StyledListWrapper>
           </StyledContainerGridColumn>
@@ -84,14 +85,6 @@ class Footer extends Component {
         </Grid>
         <StyledDivider/>
         <StyledSocialMediaContainer>
-          <StyledSocialMediaButton
-            circular
-            icon
-            href='https://www.facebook.com/lindayanggg'
-            target='_blank'
-          >
-            <Icon name="facebook f"/>
-          </StyledSocialMediaButton>
           <StyledSocialMediaButton
             circular
             icon

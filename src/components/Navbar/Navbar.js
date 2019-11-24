@@ -1,19 +1,13 @@
 import React from 'react';
 import strings from "../../res/strings";
-import {StyledDiv, StyledMenu, StyledMenuItem} from "./styles";
-import Icon from "semantic-ui-react/dist/commonjs/elements/Icon";
+import {StyledLogoWrapper, StyledMenu, StyledMenuItem, StyledMenuItemsWrapper, StyledNavbarWrapper} from "./styles";
+import {NavLink} from "react-router-dom";
+import {Image} from "semantic-ui-react";
+import wave_icon from '../../res/images/wave.png'
 
 class Navbar extends React.Component {
   state = {
-    activeItem: 'home',
     scrollTop: true,
-  };
-
-  handleItemClick = (event, {name}) => {
-    const nameLowercase = name.toLowerCase();
-    this.setState({
-      activeItem: nameLowercase,
-    })
   };
 
   handleScrollTop = () => {
@@ -37,45 +31,42 @@ class Navbar extends React.Component {
   }
 
   render() {
-    console.log(this.state.activeItem);
-    const {activeItem} = this.state;
+    const {scrollTop} = this.state;
     return (
-      <StyledDiv>
+      <StyledNavbarWrapper>
         <StyledMenu
-          scrolltop={this.state.scrollTop}
+          scrolltop={scrollTop}
           text
-          size="huge"
           fixed="top">
-          <StyledMenuItem
-            href="/"
-            active={activeItem === 'home'}
-            onClick={this.handleItemClick}
-          >
-            <Icon name='heart' size="large"/>
-          </StyledMenuItem>
-          <StyledMenuItem
-            href="/send"
-            active={activeItem === 'send'}
-            onClick={this.handleItemClick}
-          >
-            {strings.navBar.send}
-          </StyledMenuItem>
-          <StyledMenuItem
-            href="/receive"
-            active={activeItem === 'receive'}
-            onClick={this.handleItemClick}
-          >
-            {strings.navBar.receive}
-          </StyledMenuItem>
-          <StyledMenuItem
-            href="/about"
-            active={activeItem === 'about'}
-            onClick={this.handleItemClick}
-          >
-            {strings.navBar.about}
-          </StyledMenuItem>
+          <StyledLogoWrapper>
+            <Image
+              as={NavLink}
+              to='/'
+              src={wave_icon}
+              size='tiny'/>
+          </StyledLogoWrapper>
+          <StyledMenuItemsWrapper>
+            <StyledMenuItem
+              as={NavLink}
+              to="/send"
+            >
+              {strings.navBar.send}
+            </StyledMenuItem>
+            <StyledMenuItem
+              as={NavLink}
+              to="/receive"
+            >
+              {strings.navBar.receive}
+            </StyledMenuItem>
+            <StyledMenuItem
+              as={NavLink}
+              to="/about"
+            >
+              {strings.navBar.about}
+            </StyledMenuItem>
+          </StyledMenuItemsWrapper>
         </StyledMenu>
-      </StyledDiv>
+      </StyledNavbarWrapper>
     )
   }
 }
