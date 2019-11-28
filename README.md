@@ -11,5 +11,10 @@ This is the Wave React Web App. It allows for the transfer of images and text ov
 Wave Flutter (Android & iOS) App: https://github.com/davidhqr/Wave-App \
 Wave Backend API: https://github.com/davidhqr/Wave-API
 
-## `npm start`
+### Development
+To run DevTools locally, execute the following commands:
+
+1. npm install
+2. npm run dev
+3. Navigate to http://localhost:3000
 
