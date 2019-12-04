@@ -12,9 +12,9 @@ Wave Flutter (Android & iOS) App: https://github.com/davidhqr/Wave-App \
 Wave Backend API: https://github.com/davidhqr/Wave-API
 
 ### Development
-To run DevTools locally, execute the following commands:
+To run Wave locally, execute the following commands:
 
-1. npm install
-2. npm run dev
+1. yarn install
+2. yarn start
 3. Navigate to http://localhost:3000
 
